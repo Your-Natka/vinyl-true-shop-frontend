@@ -1,0 +1,96 @@
+/* about.module.css */
+.aboutSection {
+  padding: 60px 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1240px;
+  width: 100%;
+  height: 989px;
+  display: flex;
+  gap: 80px;
+}
+
+.leftSide {
+  width: 488px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.textColumns {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.textLeft {
+  text-align: left;
+  font-size: 18px;
+  color: #333;
+}
+
+.textRight {
+  text-align: right;
+  font-size: 18px;
+  color: #333;
+}
+
+.starIcon {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start; /* зірочка до лівого краю */
+}
+
+.rightSide {
+  width: 638px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.alexanderPhoto {
+  position: relative;
+  text-align: right;
+}
+
+.mainPhoto {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.photoCaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+  text-align: right;
+}
+
+.diskImage {
+  margin-top: 40px;
+}
+
+.hashtag {
+  margin-top: auto;
+  font-size: 24px;
+  font-weight: 600;
+  color: #BFBFBF;
+  text-align: right;
+  width: 100%;
+  padding-top: 40px;
+}
+
+.underline {
+  text-decoration: underline;
+  letter-spacing: 0.5px;
+}

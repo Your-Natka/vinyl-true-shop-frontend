@@ -1,0 +1,176 @@
+.sidebarContainer {
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid #212121;
+  padding: 32px 24px 42px 24px;
+  width: 252px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Контейнер для всього контенту сайдбару */
+.sidebarContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.topSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottomSection {
+  margin-top: auto;
+}
+
+.btnsContainer {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.3;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.langBtn {
+  color: #fff;
+  padding: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.langBtn:hover {
+  opacity: 0.8;
+}
+
+.logoLink {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 92px;
+  margin-top: 76px;
+  transition: opacity 0.3s ease;
+}
+
+.logoLink:hover {
+  opacity: 0.8;
+}
+
+.logo {
+  font-family: var(--font-unbounded);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.3;
+  color: #fff;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  padding: 12px 0;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  margin: 4px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.navItem:hover {
+  background-color: rgba(98, 85, 211, 0.2);
+}
+
+.navItemActive {
+  composes: navItem;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.navLink {
+  text-decoration: none;
+  display: block;
+}
+
+.navText {
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #f5f5f5;
+}
+
+.navTextActive {
+  composes: navText;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Стилі для обгортки еліпса */
+.ellipseWrapper {
+  position: absolute;
+  bottom: -100px;
+  left: -50px;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(15px);
+}
+
+.ellipseWrapper img {
+  display: block;
+}
+
+/* Стилі для елемента з випадаючим фільтром */
+.catalogItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 8px;
+}
+
+/* Кнопка-стрілка */
+.arrowButton {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 50%;
+}
+
+.arrowButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.arrowIcon {
+  transition: transform 0.3s ease;
+}
+
+/* Анімація обертання стрілки */
+.arrowRotated .arrowIcon {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 1024px) {
+  .sidebarContainer {
+    display: none;
+  }
+}

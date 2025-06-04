@@ -1,0 +1,97 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.leftButtons,
+.rightButtons {
+  display: flex;
+  gap: 12px;
+}
+
+.logoContainer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+/* Для кнопок */
+.btn {
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scalesButton {
+  display: none;
+}
+
+/* Пошуковий контейнер */
+.searchContainer {
+  display: none;
+  position: relative;
+}
+
+.searchInput {
+  font-family: var(--font-onest);
+  width: 381px;
+  border: 1px solid #434343;
+  border-radius: 4px;
+  padding: 12px;
+  font-weight: 400;
+  background: #262626;
+  color: #f5f5f5;
+}
+
+.searchInput::placeholder {
+  color: #f5f5f5;
+}
+
+.searchIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .scalesButton {
+    display: flex;
+  }
+
+  .leftButtons button:nth-child(2) {
+    display: none;
+  }
+
+  .logoContainer {
+    display: none;
+  }
+
+  .searchContainer {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .leftButtons button:first-child {
+    display: none;
+  }
+
+  .searchContainer {
+    position: absolute;
+    transform: none;
+    margin-left: auto;
+    margin-right: 108px;
+  }
+}

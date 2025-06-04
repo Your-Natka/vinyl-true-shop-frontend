@@ -1,0 +1,197 @@
+/* Панель фільтрів */
+.filterPanel {
+  background-color: #212121;
+  border-radius: 8px;
+  margin-top: 8px;
+  padding: 12px;
+  overflow: hidden;
+  animation: slideDown 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.filterPanel::-webkit-scrollbar {
+  width: 4px;
+}
+
+.filterPanel::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+
+.filterPanel::-webkit-scrollbar-thumb {
+  background: #6255d3;
+  border-radius: 4px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 60vh;
+  }
+}
+
+/* Секції фільтрів */
+.filterSection {
+  margin-bottom: 16px;
+}
+
+.filterTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Стилі для селекта */
+.filterSelect {
+  width: 100%;
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 14px;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='6' fill='none'%3E%3Cpath stroke='%23f5f5f5' stroke-linecap='round' stroke-linejoin='round' d='m1 1 5 4 5-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  cursor: pointer;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: #6255d3;
+}
+
+/* Стилі для текстових полів */
+.filterInput {
+  width: 100%;
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.filterInput:focus {
+  outline: none;
+  border-color: #6255d3;
+}
+
+.filterInputSmall {
+  width: 60px;
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.filterInputSmall:focus {
+  outline: none;
+  border-color: #6255d3;
+}
+
+/* Стилі для діапазонів "від-до" */
+.rangeInputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.rangeLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #f5f5f5;
+}
+
+/* Загальний стиль для лейблів */
+.filterLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.filterLabelText {
+  font-size: 14px;
+  color: #f5f5f5;
+}
+
+/* Стилі для групи чекбоксів */
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Чекбокси */
+.filterCheckbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 3px;
+  margin-right: 8px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filterCheckbox:checked {
+  background-color: #6255d3;
+  border-color: #6255d3;
+}
+
+.filterCheckbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Кнопка застосування фільтрів */
+.applyFilterButton {
+  background-color: #6255d3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 8px;
+}
+
+.applyFilterButton:hover {
+  background-color: #5447c0;
+}

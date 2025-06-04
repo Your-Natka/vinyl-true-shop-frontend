@@ -1,0 +1,78 @@
+:root {
+  --font-onest: "Onest", sans-serif;
+  --font-unbounded: "Unbounded", sans-serif;
+  --font-public-sans: "Public Sans", sans-serif;
+
+  /* Кольори */
+  --color-primary: #4731ff /*button*/;
+  --color-text: #171614;
+  --color-bg: #f1f1f1;
+  --hero-bg: #1a1a1a;
+  --sidebar-bg: #1a1a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-onest);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-onest);
+  color: var(--color-text);
+  font-weight: 600;
+}
+header {
+  background-color: var(--hero-bg);
+}
+
+p {
+  font-family: var(--font-onest);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Обгортка для основного контенту (все крім сайдбару) */
+.main-content {
+  flex: 1;
+  margin-left: 252px; /* Ширина сайдбару */
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 0;
+  }
+}
