@@ -42,7 +42,7 @@ const reviews = [
 ];
 const Reviews = () => {
   return (
-    <section className={css.section}>
+    <section id="reviews" className={css.section}>
       {css.section}
       <h2 className={css.heading}>Відгуки</h2>
       <Swiper
