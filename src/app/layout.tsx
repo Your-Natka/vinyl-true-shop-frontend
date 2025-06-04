@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${onest.variable} ${unbounded.variable} ${publicSans.variable}`}
+      className={`scroll-smooth ${onest.variable} ${unbounded.variable} ${publicSans.variable}`}
     >
       <body>
         <div className="app-layout">

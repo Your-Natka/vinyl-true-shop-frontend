@@ -62,6 +62,23 @@
   align-items: center;
 }
 
+.navLinks {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.activeLink {
+  color: #60a5fa; /* Наприклад, блакитний */
+  font-weight: bold;
+}
+
 @media (min-width: 768px) {
   .scalesButton {
     display: flex;

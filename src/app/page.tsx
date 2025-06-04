@@ -1,5 +1,7 @@
-
 import Hero from "@/components/home/Hero/Hero";
+import Reviews from "@/components/home/Reviews/Reviews";
+import About from "@/components/home/About/About";
+import Products from "@/components/home/Products/Products"; // якщо є
 import Container from "@/components/ui/Container/Container";
 
 export default function Home() {
@@ -7,8 +9,9 @@ export default function Home() {
     <>
       <Container>
         <Hero />
-        {/* <Reviews />
-        <About /> */}
+        <Products /> {/* Популярне, розпродаж */}
+        <Reviews />
+        <About />
       </Container>
     </>
   );
