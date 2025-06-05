@@ -1,3 +1,5 @@
+"use client"
+
 import styles from './About.module.css';
 import Image from 'next/image';
 
@@ -35,7 +37,7 @@ const About = () => {
    
             <div className={styles.alexanderPhoto}>
               <Image
-                src="/images/alexander.jpg"
+                src="/images/owner-photo-1x.jpg"
                 alt="Олександр Тимко"
                 width={463}
                 height={437}
@@ -46,7 +48,7 @@ const About = () => {
 
             <div className={styles.diskImage}>
               <Image 
-                src="/images/vinyl-disk.png" 
+                src="/images/vanyl-disk.png" 
                 alt="Вініловий диск" 
                 width={442} 
                 height={447}

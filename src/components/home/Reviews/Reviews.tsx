@@ -22,20 +22,20 @@ const reviews = [
     author: "Mark Benson",
   },
   {
-    img: "/reviews/3.jpg",
-    avatar: "/avatars/3.jpg",
+    img: "/reviews/1.jpg",
+    avatar: "/avatars/1.jpg",
     text: "Дякую за рідкісний реліз! Дуже задоволений.",
     author: "Anna Kostina",
   },
   {
-    img: "/reviews/4.jpg",
-    avatar: "/avatars/4.jpg",
+    img: "/reviews/1.jpg",
+    avatar: "/avatars/1.jpg",
     text: "Професіонали своєї справи!",
     author: "Ivan Petrenko",
   },
   {
-    img: "/reviews/5.jpg",
-    avatar: "/avatars/5.jpg",
+    img: "/reviews/1.jpg",
+    avatar: "/avatars/1.jpg",
     text: "Найкращий сервіс для меломанів!",
     author: "Olga Melnyk",
   },
@@ -43,7 +43,6 @@ const reviews = [
 const Reviews = () => {
   return (
     <section id="reviews" className={css.section}>
-      {css.section}
       <h2 className={css.heading}>Відгуки</h2>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
@@ -65,8 +64,7 @@ const Reviews = () => {
                 <Image
                   src={review.img}
                   alt={review.author}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
                   className={css.image}
                 />
               </div>
