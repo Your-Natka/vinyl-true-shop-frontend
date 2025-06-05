@@ -12,9 +12,15 @@
 }
 
 * {
+  outline: 1px solid transparent;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 body {
@@ -63,11 +69,15 @@ button {
 .app-layout {
   display: flex;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Обгортка для основного контенту (все крім сайдбару) */
 .main-content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
   margin-left: 252px; /* Ширина сайдбару */
 }
 
