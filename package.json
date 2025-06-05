@@ -14,7 +14,7 @@
     "@hookform/resolvers": "^5.0.1",
     "@mui/material": "^7.0.2",
     "axios": "^1.8.4",
-    "next": "15.3.1",
+    "next": "^15.3.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.56.1",
@@ -24,7 +24,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
-    "@types/react": "^19",
+    "@types/react": "^19.1.6",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
