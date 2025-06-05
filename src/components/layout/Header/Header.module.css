@@ -90,7 +90,7 @@
   font-weight: bold;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .scalesButton {
     display: flex;
   }
@@ -116,6 +116,10 @@
     display: none;
   }
 
+  .navLinks {
+    display: none;
+  }
+  
   .searchContainer {
     position: absolute;
     transform: none;
