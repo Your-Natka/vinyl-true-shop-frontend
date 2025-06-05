@@ -70,10 +70,17 @@
 
 .navLinks a {
   color: white;
+  font-weight: 500;
   text-decoration: none;
   transition: color 0.3s;
 }
+.navLinks a:hover {
+  color: #88c0d0;
+}
 
+.active {
+  color: #00bcd4;
+}
 .activeLink {
   color: #60a5fa; /* Наприклад, блакитний */
   font-weight: bold;

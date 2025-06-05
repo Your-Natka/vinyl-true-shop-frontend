@@ -1,3 +1,5 @@
+"use client"
+
 import css from "@/components/layout/Header/Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
