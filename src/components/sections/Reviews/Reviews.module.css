@@ -55,13 +55,12 @@
     color: #374151;
     font-size: 0.875rem;
     margin-bottom: 0.75rem;
-    text-align: center;
+    text-align: left;
   }
   
   .authorBlock {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 0.5rem;
     margin-top: auto;
   }
@@ -76,12 +75,14 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
+    align-items: left;
   }
   
   .author {
     color: #111827;
     font-weight: 600;
     font-size: 0.875rem;
+    align-items: left;
   }
   
   .swiper-pagination {
