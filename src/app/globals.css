@@ -78,7 +78,8 @@ button {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  margin-left: 252px; /* Ширина сайдбару */
+  margin-left: 252px; 
+  width: calc(100% - 276px);
 }
 
 .scrollbar-hide::-webkit-scrollbar {
