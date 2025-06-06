@@ -1,7 +1,9 @@
 /* about.module.css */
 .aboutSection {
-  padding: 60px 20px;
-  background-color: #fff;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  padding-left: 24px;
+  padding-right: 50px;
   display: flex;
   justify-content: center;
 }
@@ -65,7 +67,6 @@
 }
 
 .mainPhoto {
-  border-radius: 8px;
   object-fit: cover;
 }
 

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import styles from "./Sidebar.module.css";
-import { mainNavLinks } from "@/lib/navigation";
+import { mainNavLinks } from "@/config/navigation";
 import Contacts from "@/components/ui/Contacts/Contacts";
 import VinylFilters, {
   FilterValues,

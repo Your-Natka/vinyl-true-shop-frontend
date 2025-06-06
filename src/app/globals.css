@@ -4,7 +4,7 @@
   --font-public-sans: "Public Sans", sans-serif;
 
   /* Кольори */
-  --color-primary: #5f3bff /*button*/;
+  --color-primary: #4731ff /*button*/;
   --color-text: #171614;
   --color-bg: #f1f1f1;
   --hero-bg: #1a1a1a;
@@ -79,7 +79,7 @@ button {
   flex-direction: column;
   min-width: 0;
   margin-left: 252px; 
-  width: calc(100% - 276px);
+  width: calc(100% - 252px);
 }
 
 .scrollbar-hide::-webkit-scrollbar {
