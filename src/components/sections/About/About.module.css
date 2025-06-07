@@ -87,7 +87,7 @@
 
 .diskImage {
   position: absolute;
-  top: 260%;
+  top: 120%;
   left: 50%;
   z-index: 2;
 }
