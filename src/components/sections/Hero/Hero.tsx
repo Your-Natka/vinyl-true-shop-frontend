@@ -15,28 +15,34 @@ const albumCovers = [
 export default function Hero() {
   return (
     <section className={styles.heroSection}>
-      <div className={styles.logoText}>
-        <div className={styles.overlay}>
+      {/* Лівий контейнер */}
+      <div className={styles.boxLeft}>
+        <p>[ Для насолоди ]</p>
+      </div>
+
+      {/* Правий контейнер */}
+      <div className={styles.boxRight}>
+        <p>[ Для душі ]</p>
+      </div>
+
+      {/* Центральний контейнер */}
+      <div className={styles.heroContent}> 
+        {/* Перший контейнер — диск + текст */}
+        <div className={styles.heroVisual}>
+          <div className={styles.diskBackground}></div>
           <h1 className={styles.logoTitle}>
-            <span className={styles.wordTop}>Vinyl</span>
-            <span className={styles.logoImage}>
-              <Image
-                src="/images/vinyl-disk.png"
-                alt="Vinyl icon"
-                width={344}
-                height={344}
-                priority
-              />
-            </span>
-            <span className={styles.wordBottom}>True</span>
+            <span className={styles.topTitle}>Vinyl</span>
+            True
           </h1>
         </div>
 
-        <p className={styles.slogan}>[ Для насолоди ]</p>
-
-        <button className={styles.ctaButton}>Каталог</button>
+        {/* Другий контейнер — кнопка */}
+        <div className={styles.ctaWrapper}>
+          <button className={styles.ctaButton}>Каталог</button>
+        </div>
       </div>
 
+      {/* Галерея */}
       <div className={styles.albumGallery}>
         <div className={styles.albumRow}>
           {albumCovers.map((src, idx) => (
@@ -44,8 +50,8 @@ export default function Hero() {
               <Image
                 src={src}
                 alt={`album-${idx}`}
-                width={133}
-                height={133}
+                width={130}
+                height={130}
                 className={styles.albumImage}
               />
             </div>

@@ -1,134 +1,132 @@
 .heroSection {
   position: relative;
-  background-color: black;
+  background-color: #1a1a1a;
   color: white;
-  min-height: 100vh;
+  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 5rem 1rem;
+  overflow: hidden;
 }
 
-.logoText {
-  height: 460px;
-  width: 354px;
-  text-align: center;
-  color: #111; /* text-gray-900 */
-}
-.overlay {
+.heroContent {
   position: relative;
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Перший блок — диск + напис */
+.heroVisual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.diskBackground {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-image: url("/images/vinyl-disk.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
+
+/* Текст зверху фону */
 .logoTitle {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2em;
-  font-weight: 900;
-  line-height: 1;
-}
-.wordTop,
-.wordBottom {
-  color: white;
-  font-size: 5rem;
-  animation: fadeIn 1s ease-in-out;
-}
-
-@media (min-width: 768px) {
-  .logoTitle {
-    font-size: 72px;
-  }
-  .wordTop,
-  .wordBottom {
-    font-size: 3rem;
-  }
-  .heroSection {
-    background-size: 300px;
-  }
-}
-
-.logoImage {
-  object-fit: contain;
-  width: 344px;
-}
-
-.topText,
-.bottomText {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   font-family: var(--font-unbounded);
-  font-weight: 600;
-  font-size: 64px;
-  line-height: 1.3;
-  color: #fff;
-  white-space: nowrap;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 1;
+  text-align: center;
+  font-weight: bold;
+  z-index: 2;
+  color: white;
+  position: relative;
 }
 
-.topText {
-  top: 0;
+.topTitle {
+  display: block;
+  font-size: 100px;
 }
 
-.bottomText {
-  bottom: 0;
-}
-
-.slogan {
-  margin-top: 0.75rem;
-  font-size: 1.125rem;
-  letter-spacing: 0.05em;
-  color: #9ca3af; /* text-gray-400 */
+/* Другий блок — кнопка */
+.ctaWrapper {
+  margin-top: -2rem;
+  z-index: 3;
+  position: relative;
 }
 
 .ctaButton {
-  margin-top: 1.5rem;
-  background-color: #4731ff; /* bg-purple-600 */
-  color: white;
-  padding: 0.75rem 2rem;
+  padding: 0.6rem 1.8rem;
   font-size: 1rem;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+  cursor: pointer;
 }
 
-.ctaButton:hover {
-  background-color: #6d28d9; /* hover:bg-purple-700 */
+.boxLeft, .boxRight {
+  width: 130px;
+  height: 130px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.boxLeft {
+  position: absolute;
+  top: 25%;
+  left: 2rem;
+  transform: translateY(-50%);
+}
+
+.boxRight {
+  position: absolute;
+  z-index: 2;
+  top: 4rem;
+  right: 6rem;
 }
 
 .albumGallery {
-  margin-top: 4rem;
-  width: 100%;
-  max-width: 96rem;
-  overflow-x: auto;
-  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 2rem;
 }
 
 .albumRow {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
 }
 
 .albumItem {
-  flex-shrink: 0;
-  gap: 16px
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .albumImage {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.albumImage:hover {
-  transform: scale(1.05);
-}
-/* Анімація */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  width: 100%;
+  height: 100%;
 }
