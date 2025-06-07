@@ -12,17 +12,15 @@ const About = () => {
           <h2 className={styles.title}>Про нас</h2>
 
           <div className={styles.textColumns}>
-            <p className={styles.textRight}>
+            <p className={`${styles.textsColumn} ${styles.alignRight}`}>
               Роки колекціонування та ділінгу дозволили зібрати таку кількість платівок, 
-              якої для однієї людини буде забагато.
+              якої для однієї людини буде забагато...
             </p>
-            <p className={styles.textLeft}>
-              Ми маємо багато нових та старих релізів, вінтажних, таких яких дуже багато, 
-              і таких які трапляються дуже рідко.
+            <p className={`${styles.textColumn} ${styles.alignLeft}`}>
+              Ми маємо багато нових та старих релізів, вінтажних, таких яких дуже багато...
             </p>
-            <p className={styles.textRight}>
-              З радістю пропонуємо вам великий асортимент, який постійно розширюється. 
-              Якщо чогось не знайшли — можливе передзамовлення.
+            <p className={`${styles.textsColumn} ${styles.alignRight}`}>
+              З радістю пропонуємо вам великий асортимент...
             </p>
           </div>
 

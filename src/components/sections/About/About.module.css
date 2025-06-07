@@ -27,25 +27,30 @@
   font-weight: 500;
   font-size: 36px;
   font-weight: bold;
-  margin-bottom: 40px;
 }
 
 .textColumns {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 117px;
+}
+
+.textsColumn {
+  margin-left: 210px;
+}
+
+.textColumn {
+  margin-right: 210px;
 }
 
 .textLeft {
-  text-align: left;
   font-size: 18px;
-  color: #333;
+  text-align: left;
 }
 
 .textRight {
-  text-align: right;
   font-size: 18px;
-  color: #333;
+  text-align: right;
 }
 
 .starIcon {
@@ -76,10 +81,15 @@
   font-size: 14px;
   color: #666;
   text-align: right;
+  position: relative;
+  z-index: 1;
 }
 
 .diskImage {
-  margin-top: 40px;
+  position: absolute;
+  top: 260%;
+  left: 50%;
+  z-index: 2;
 }
 
 .hashtag {
@@ -91,7 +101,7 @@
   color: #BFBFBF;
   text-align: right;
   width: 100%;
-  padding-top: 40px;
+  padding-top: 375px;
 }
 
 .underline {
