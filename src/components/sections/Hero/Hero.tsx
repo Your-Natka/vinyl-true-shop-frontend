@@ -27,21 +27,19 @@ export default function Hero() {
 
       {/* Центральний контейнер */}
       <div className={styles.heroContent}> 
-        {/* Перший контейнер — диск + текст */}
         <div className={styles.heroVisual}>
           <div className={styles.diskBackground}></div>
-          <h1 className={styles.logoTitle}>
-            <span className={styles.topTitle}>Vinyl</span>
-            True
-          </h1>
+            <h1 className={styles.logoTitle}>
+              <span className={styles.topTitle}>Vinyl</span>
+                True
+            </h1>
+          <div className={styles.ctaWrapper}>
+            <button className={styles.ctaButton}>Каталог</button>
+          </div>
         </div>
-
-        {/* Другий контейнер — кнопка */}
-        <div className={styles.ctaWrapper}>
-          <button className={styles.ctaButton}>Каталог</button>
-        </div>
+        
       </div>
-
+      
       {/* Галерея */}
       <div className={styles.albumGallery}>
         <div className={styles.albumRow}>

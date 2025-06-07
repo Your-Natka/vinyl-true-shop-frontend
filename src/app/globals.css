@@ -81,7 +81,10 @@ button {
   margin-left: 252px; 
   width: calc(100% - 252px);
 }
-
+.container {
+  max-width: 1190px;
+  margin: 0 auto;
+}
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }

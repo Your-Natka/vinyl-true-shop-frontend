@@ -94,7 +94,10 @@
   .scalesButton {
     display: flex;
   }
-
+  .navLinks {
+    display: none;
+  }
+  
   .leftButtons button:nth-child(2) {
     display: none;
   }

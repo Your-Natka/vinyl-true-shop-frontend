@@ -2,42 +2,48 @@
   position: relative;
   background-color: #1a1a1a;
   color: white;
-  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  padding-left: 24px;
+  padding-right: 50px;
+  margin-bottom: 24px;
 }
 
 .heroContent {
   position: relative;
   text-align: center;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  margin-top: 86px;
+  margin-bottom: 178px;
 }
 
-/* Перший блок — диск + напис */
 .heroVisual {
   position: relative;
+  width: 100%;
+  max-width: 354px;
+  height: 460px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  align-content: stretch;
+  margin: 0 auto;
 }
-
+/* Перший блок — диск + напис */
 .diskBackground {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 344px;
+  height: 344px;
   background-image: url("/images/vinyl-disk.png");
   background-size: cover;
   background-position: center;
-  opacity: 0.15;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  opacity: 0.5;
   z-index: 1;
 }
 
@@ -46,24 +52,25 @@
   font-family: var(--font-unbounded);
   font-weight: 800;
   font-size: 80px;
-  line-height: 1;
+  line-height: 1.1;
   text-align: center;
-  font-weight: bold;
-  z-index: 2;
   color: white;
   position: relative;
+  z-index: 2;
+  margin-bottom: 30px;
 }
 
 .topTitle {
   display: block;
   font-size: 100px;
+  margin-bottom: 122px;
 }
 
 /* Другий блок — кнопка */
 .ctaWrapper {
-  margin-top: -2rem;
   z-index: 3;
   position: relative;
+  margin-top: 70px;
 }
 
 .ctaButton {
@@ -108,19 +115,18 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
-  margin-top: 2rem;
+  margin-bottom: 44px;
 }
 
 .albumRow {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 18px;
+  gap: 16px;
 }
 
 .albumItem {
-  width: 130px;
-  height: 130px;
+  width: 133px;
+  height: 133px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
@@ -129,4 +135,44 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+/* 📲 Tablet (640px–1023px) */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .heroVisual {
+    max-width: 320px;
+  }
+
+  .diskBackground {
+    width: 320px;
+    height: 320px;
+  }
+
+  .logoTitle {
+    font-size: 70px;
+  }
+
+  .topTitle {
+    font-size: 95px;
+  }
+
+  .albumItem {
+    width: 110px;
+    height: 110px;
+  }
+}
+@media (max-width: 639px) {
+  .boxLeft, .boxRight {
+    display: none;
+  }
+
+  .heroContent {
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+
+  .ctaButton {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.4rem;
+  }
 }
