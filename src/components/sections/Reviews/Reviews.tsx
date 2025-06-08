@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
-import css from "./Reviews.module.css";
+import style from "./Reviews.module.css";
 
 const reviews = [
   {
@@ -42,44 +42,44 @@ const reviews = [
 ];
 const Reviews = () => {
   return (
-    <section id="reviews" className={css.section}>
-      <h2 className={css.heading}>Відгуки</h2>
+    <section id="reviews" className={style.section}>
+      <h2 className={style.heading}>Відгуки</h2>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={20}
         slidesPerView={2}
         navigation
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        breakpoints={{
-          640: { slidesPerView: 2 },
-          768: { slidesPerView: 4 },
-          1024: { slidesPerView: 5 },
-        }}
-      >
-        {reviews.map((review, idx) => (
-          <SwiperSlide key={idx}>
-            <div className={css.card}>
-              <div className={css.imageContainer}>
+        pagination={{ el: ".custom-pagination", clickable: true }}
+  autoplay={{ delay: 3000, disableOnInteraction: false }}
+  breakpoints={{
+    640: { slidesPerView: 2 },
+    768: { slidesPerView: 4 },
+    1024: { slidesPerView: 5 },
+  }}
+>
+  {reviews.map((review, idx) => (
+    <SwiperSlide key={idx}>
+      <div className={style.card}>
+        <div className={style.imageContainer}>
                 <Image
                   src={review.img}
                   alt={review.author}
                   fill
-                  className={css.image}
+                  className={style.image}
                 />
               </div>
-              <p className={css.text}>{review.text}</p>
-              <div className={css.authorBlock}>
-                <div className={css.avatar}>
+              <p className={style.text}>{review.text}</p>
+              <div className={style.authorBlock}>
+                <div className={style.avatar}>
                   <Image
                     src={review.avatar}
                     alt={review.author}
                     width={24}
                     height={24}
-                    className={css.avatarImage}
+                    className={style.avatarImage}
                   />
                 </div>
-                <p className={css.author}>{review.author}</p>
+                <p className={style.author}>{review.author}</p>
               </div>
             </div>
           </SwiperSlide>
