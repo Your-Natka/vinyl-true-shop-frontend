@@ -49,18 +49,18 @@ const Reviews = () => {
         spaceBetween={20}
         slidesPerView={2}
         navigation
-        pagination={{ el: ".custom-pagination", clickable: true }}
-  autoplay={{ delay: 3000, disableOnInteraction: false }}
-  breakpoints={{
-    640: { slidesPerView: 2 },
-    768: { slidesPerView: 4 },
-    1024: { slidesPerView: 5 },
-  }}
->
-  {reviews.map((review, idx) => (
-    <SwiperSlide key={idx}>
-      <div className={style.card}>
-        <div className={style.imageContainer}>
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        breakpoints={{
+          640: { slidesPerView: 2 },
+          768: { slidesPerView: 4 },
+          1024: { slidesPerView: 5 },
+        }}
+      >
+        {reviews.map((review, idx) => (
+          <SwiperSlide key={idx}>
+            <div className={style.card}>
+              <div className={style.imageContainer}>
                 <Image
                   src={review.img}
                   alt={review.author}

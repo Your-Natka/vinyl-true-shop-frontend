@@ -46,7 +46,7 @@ const About = () => {
 
             <div className={styles.diskImage}>
               <Image 
-                src="/images/vanyl-disk.png" 
+                src="/images/vinyl-disk.png" 
                 alt="Вініловий диск" 
                 width={442} 
                 height={447}
