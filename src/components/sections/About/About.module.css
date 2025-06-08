@@ -33,6 +33,7 @@
   display: flex;
   flex-direction: column;
   gap: 117px;
+  margin-bottom: 190px;
 }
 
 .textsColumn {
@@ -43,7 +44,7 @@
   margin-right: 210px;
 }
 
-.textLeft {
+.textsLeft {
   font-size: 18px;
   text-align: left;
 }
@@ -54,12 +55,13 @@
 }
 
 .starIcon {
-  margin-top: 40px;
   display: flex;
-  justify-content: flex-start; /* зірочка до лівого краю */
+  justify-content: flex-start;
+  margin-bottom: 44px;
 }
 
 .rightSide {
+  position: relative;
   width: 638px;
   display: flex;
   flex-direction: column;
@@ -87,9 +89,9 @@
 
 .diskImage {
   position: absolute;
-  top: 120%;
-  left: 50%;
-  z-index: 2;
+  top: 20%;
+  right: 35%;
+  z-index: -1;
 }
 
 .hashtag {
