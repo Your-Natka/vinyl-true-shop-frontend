@@ -8,7 +8,8 @@ import Sidebar from "@/components/layout/Sidebar/Sidebar";
 export const metadata: Metadata = {
   title: "Vinyl True Shop",
   description:
-    "A curated collection of high-quality vinyl records, featuring classic albums, limited editions, and the latest releases.",
+    "A curated collection of high-quality vinyl records, featuring classic albums, limited editions, " +
+    "and the latest releases.",
 };
 
 export default function RootLayout({
@@ -17,10 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`scroll-smooth ${onest.variable} ${unbounded.variable} ${publicSans.variable}`}
-    >
+    <html lang="en" className={`scroll-smooth ${onest.variable} ${unbounded.variable} ${publicSans.variable}`}>
       <body>
         <div className="app-layout">
           <Sidebar />

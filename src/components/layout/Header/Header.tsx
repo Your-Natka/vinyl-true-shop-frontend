@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import css from "@/components/layout/Header/Header.module.css";
 import Image from "next/image";
@@ -38,7 +38,12 @@ const Header = () => {
       {/* Ліві кнопки */}
       <div className={css.leftButtons}>
         <button className="btn">
-          <Image src={mobileMenu} alt="mobile menu icon" width={24} height={24} />
+          <Image
+            src={mobileMenu}
+            alt="mobile menu icon"
+            width={24}
+            height={24}
+          />
         </button>
         <button className="btn">
           <Image src={search} alt="search icon" width={24} height={24} />
@@ -52,10 +57,27 @@ const Header = () => {
 
       {/* Навігація */}
       <nav className={css.navLinks}>
-        <Link href="#hero" className={active === "hero" ? css.activeLink : ""}>Головна</Link>
-        <Link href="#products" className={active === "products" ? css.activeLink : ""}>Популярне</Link>
-        <Link href="#reviews" className={active === "reviews" ? css.activeLink : ""}>Відгуки</Link>
-        <Link href="#about" className={active === "about" ? css.activeLink : ""}>Про нас</Link>
+        <Link href="#hero" className={active === "hero" ? css.activeLink : ""}>
+          Головна
+        </Link>
+        <Link
+          href="#products"
+          className={active === "products" ? css.activeLink : ""}
+        >
+          Популярне
+        </Link>
+        <Link
+          href="#reviews"
+          className={active === "reviews" ? css.activeLink : ""}
+        >
+          Відгуки
+        </Link>
+        <Link
+          href="#about"
+          className={active === "about" ? css.activeLink : ""}
+        >
+          Про нас
+        </Link>
       </nav>
 
       {/* Пошук */}
@@ -72,19 +94,18 @@ const Header = () => {
 
       {/* Праві кнопки */}
       <div className={css.rightButtons}>
-        <button className={`btn ${css.scalesButton}`}>
+        <Link href="#" className={`btn ${css.scalesButton}`}>
           <Image src={scales} alt="scales icon" width={24} height={24} />
-        </button>
-        <button className="btn">
+        </Link>
+        <Link href="/shop/basket" className="btn">
           <Image src={cart} alt="cart icon" width={24} height={24} />
-        </button>
-        <button className="btn">
+        </Link>
+        <Link href="/auth" className="btn">
           <Image src={profile} alt="profile icon" width={24} height={24} />
-        </button>
+        </Link>
       </div>
     </div>
   );
 };
 
 export default Header;
-
