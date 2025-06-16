@@ -16,8 +16,8 @@ const reviews = [
     author: "Lyandra Cromwell",
   },
   {
-    img: "/reviews/2.jpg",
-    avatar: "/avatars/2.jpg",
+    img: "/reviews/1.jpg",
+    avatar: "/avatars/1.jpg",
     text: "Платівки якісні, доставили швидко.",
     author: "Mark Benson",
   },

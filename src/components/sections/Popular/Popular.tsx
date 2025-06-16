@@ -34,12 +34,17 @@ const PopularSection = () => (
         }}
       >
       {mockProducts.map((product, index) => (
-        <SwiperSlide key={index}>
+        <SwiperSlide key={index} className={styles.slider}>
           <div className={styles.card}>
             <div className={styles.imageContainer}>
               <ProductCard {...product} />
-              <p className={styles.text}>{product.title}</p>
+             
             </div>
+            <p className={styles.text}>{product.title}</p>
+            <p className={styles.artist}>{product.artist}</p>
+            <p className={styles.year}>{product.year}</p>
+            <p className={styles.genre}>{product.genre}</p>
+            <p className={styles.price}>{product.price} грн</p>
           </div>
         </SwiperSlide>
       ))}
