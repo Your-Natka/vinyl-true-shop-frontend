@@ -25,11 +25,13 @@
 
 .title {
   font-weight: 500;
-  font-size: 36px;
   font-weight: bold;
+  font-size: 40px;
 }
 
 .textColumns {
+  
+  font-size: 16px;
   display: flex;
   flex-direction: column;
   gap: 117px;
@@ -38,6 +40,7 @@
 
 .textFirst,
 .textThird {
+  margin-top: 58px;
   margin-left: 210px;
   font-size: 18px;
   text-align: left;

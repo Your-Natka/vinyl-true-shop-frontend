@@ -38,7 +38,6 @@ const PopularSection = () => (
           <div className={styles.card}>
             <div className={styles.imageContainer}>
               <ProductCard {...product} />
-             
             </div>
             <p className={styles.text}>{product.title}</p>
             <p className={styles.artist}>{product.artist}</p>
