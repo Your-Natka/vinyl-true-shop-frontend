@@ -36,20 +36,15 @@
   margin-bottom: 190px;
 }
 
-.textsColumn {
+.textFirst,
+.textThird {
   margin-left: 210px;
-}
-
-.textColumn {
-  margin-right: 210px;
-}
-
-.textsLeft {
   font-size: 18px;
   text-align: left;
 }
 
-.textRight {
+.textSecond {
+  margin-right: 210px;
   font-size: 18px;
   text-align: right;
 }

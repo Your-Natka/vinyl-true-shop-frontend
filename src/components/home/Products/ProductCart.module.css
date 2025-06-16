@@ -1,0 +1,26 @@
+.card {
+  width: 192px; /* w-48 */
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  padding: 8px; /* p-2 */
+  font-size: 0.875rem; /* text-sm */
+}
+
+.title {
+  font-weight: 600;
+}
+
+.price {
+  font-weight: 600;
+  margin-top: 4px;
+}

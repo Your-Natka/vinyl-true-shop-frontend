@@ -42,10 +42,23 @@
   background-image: url("/images/vinyl-disk.png");
   background-size: cover;
   background-position: center;
-  opacity: 0.5;
+  filter: brightness(0.8);
   z-index: 1;
 }
-
+.diskBackground::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.3) 0%, transparent 70%);
+  filter: blur(40px);
+  z-index: 0;
+  pointer-events: none;
+}
 /* Текст зверху фону */
 .logoTitle {
   font-family: var(--font-unbounded);
@@ -97,8 +110,8 @@
 
 .boxLeft {
   position: absolute;
-  top: 25%;
-  left: 2rem;
+  top: 45%;
+  left: 20rem;
   transform: translateY(-50%);
 }
 

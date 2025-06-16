@@ -4,6 +4,7 @@ import { onest, unbounded, publicSans } from "./fonts";
 import Header from "@/components/layout/Header/Header";
 import Container from "@/components/ui/Container/Container";
 import Sidebar from "@/components/layout/Sidebar/Sidebar";
+import Footer from "@/components/layout/Footer/footer";
 
 export const metadata: Metadata = {
   title: "Vinyl True Shop",
@@ -29,7 +30,7 @@ export default function RootLayout({
               </Container>
             </header>
             <main>{children}</main>
-            <footer></footer>
+            <Footer />
           </div>
         </div>
       </body>
