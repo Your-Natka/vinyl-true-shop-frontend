@@ -17,12 +17,12 @@ export default function Hero() {
     <section className={styles.heroSection}>
       {/* Лівий контейнер */}
       <div className={styles.boxLeft}>
-        <p>[ Для насолоди ]</p>
+        <p className={styles.text}>[ Для насолоди ]</p>
       </div>
 
       {/* Правий контейнер */}
       <div className={styles.boxRight}>
-        <p>[ Для душі ]</p>
+        <p className={styles.text}>[ Для душі ]</p>
       </div>
 
       {/* Центральний контейнер */}

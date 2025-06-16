@@ -14,6 +14,34 @@
   margin-bottom: 40px;
   }
 
-.slider {
-  padding-left: 8px;
-}
+.card {
+    border: 1px solid #e5e7eb;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    background-color: #f9fafb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    height: 12rem;
+    overflow: hidden;
+    margin-bottom: 24px;
+  }
+
+  .text {
+    color: #374151;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+    text-align: left;
+  }

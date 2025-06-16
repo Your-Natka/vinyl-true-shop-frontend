@@ -95,8 +95,8 @@
 }
 
 .boxLeft, .boxRight {
-  width: 130px;
-  height: 130px;
+  width: 186px;
+  height: 186px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(4px);
   color: #fff;
@@ -110,8 +110,8 @@
 
 .boxLeft {
   position: absolute;
-  top: 45%;
-  left: 20rem;
+  top: 42%;
+  left: 22rem;
   transform: translateY(-50%);
 }
 
@@ -122,6 +122,12 @@
   right: 6rem;
 }
 
+.text {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: #bfbfbf;
+}
 .albumGallery {
   display: flex;
   justify-content: center;
