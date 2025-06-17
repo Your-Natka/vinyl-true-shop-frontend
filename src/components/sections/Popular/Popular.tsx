@@ -1,55 +1,138 @@
-'use client';
+"use client";
+import { useState } from "react";
+import Image from "next/image";
+import styles from "./Popular.module.css";
 
-import ProductCard from '@/components/home/Products/ProductCart';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import styles from './Popular.module.css';
+interface Product {
+  id: number;
+  title: string;
+  artist: string;
+  category: string;
+  price: number;
+  image: string;
+}
 
-const mockProducts = Array(6).fill({
-  id: '1',
-  title: 'Greatest Hits',
-  artist: 'Deep Purple',
-  year: 1987,
-  genre: 'Grunge',
-  price: 200,
-  image: '/albums/1.jpg',
-});
+const products: Product[] = [
+  {
+    id: 1,
+    title: "Greatest Hits",
+    artist: "Grace Purple",
+    category: "Поп",
+    price: 860,
+    image: "/albums/1.jpg",
+  },
+  {
+    id: 2,
+    title: "The Vinyl Era",
+    artist: "RetroWave",
+    category: "Ретро",
+    price: 790,
+    image: "/albums/2.jpg",
+  },
+  {
+    id: 3,
+    title: "Classic Vibes",
+    artist: "Jazzman",
+    category: "Джаз",
+    price: 950,
+    image: "/albums/3.jpg",
+  },
+  {
+    id: 4,
+    title: "Electro Soul",
+    artist: "SynthMuse",
+    category: "Електроніка",
+    price: 720,
+    image: "/albums/4.jpg",
+  },
+  {
+    id: 5,
+    title: "Melody Drive",
+    artist: "IndieLight",
+    category: "Інді",
+    price: 880,
+    image: "/albums/5.jpg",
+  },
+  {
+    id: 6,
+    title: "Lo-Fi Sessions",
+    artist: "LoRider",
+    category: "Lo-fi",
+    price: 810,
+    image: "/albums/6.jpg",
+  },
+  {
+    id: 7,
+    title: "Underground Hits",
+    artist: "BasementCrew",
+    category: "Хіп-хоп",
+    price: 870,
+    image: "/albums/7.jpg",
+  },
+];
 
-const PopularSection = () => (
-  <section className={styles.section}>
-    <h2 className={styles.heading}>Популярні</h2>
-    <Swiper modules={[Navigation, Pagination, Autoplay]}
-        spaceBetween={20}
-        slidesPerView={2}
-        navigation
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        breakpoints={{
-          640: { slidesPerView: 2 },
-          768: { slidesPerView: 4 },
-          1024: { slidesPerView: 5 },
-        }}
-      >
-      {mockProducts.map((product, index) => (
-        <SwiperSlide key={index} className={styles.slider}>
-          <div className={styles.card}>
-            <div className={styles.imageContainer}>
-              <ProductCard {...product} />
+const PAGE_SIZE = 5;
+
+export default function Popular() {
+  const [page, setPage] = useState(0);
+  const totalPages = Math.ceil(products.length / PAGE_SIZE);
+
+  const visibleProducts = products.slice(
+    page * PAGE_SIZE,
+    (page + 1) * PAGE_SIZE
+  );
+
+  return (
+    <section className={styles.popular}>
+      <h2 className={styles.title}>Популярні</h2>
+
+      <div className={styles.sliderWrapper}>
+        <div className={styles.slider}>
+          {visibleProducts.map((p) => (
+            <div key={p.id} className={styles.card}>
+              <Image
+                src={p.image}
+                alt={p.title}
+                width={160}
+                height={160}
+                className={styles.image}
+              />
+              <div className={styles.info}>
+                <h3 className={styles.album}>{p.title}</h3>
+                <p className={styles.artist}>{p.artist}</p>
+                <span className={styles.category}>{p.category}</span>
+                <p className={styles.price}>{p.price} грн</p>
+              </div>
             </div>
-            <p className={styles.text}>{product.title}</p>
-            <p className={styles.artist}>{product.artist}</p>
-            <p className={styles.year}>{product.year}</p>
-            <p className={styles.genre}>{product.genre}</p>
-            <p className={styles.price}>{product.price} грн</p>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </section>
-);
+          ))}
+        </div>
 
-export default PopularSection;
+        <div className={styles.navRight}>
+          <button
+            className={`${styles.arrow} ${page === 0 ? styles.disabled : styles.active}`}
+            onClick={() => setPage((p) => Math.max(p - 1, 0))}
+            disabled={page === 0}
+          >
+            &lt;
+          </button>
+          <button
+            className={`${styles.arrow} ${page === totalPages - 1 ? styles.disabled : styles.active}`}
+            onClick={() => setPage((p) => Math.min(p + 1, totalPages - 1))}
+            disabled={page === totalPages - 1}
+          >
+            &gt;
+          </button>
+        </div>
+      </div>
 
+      <div className={styles.dotsWrapper}>
+        {Array.from({ length: totalPages }).map((_, i) => (
+          <span
+            key={i}
+            className={`${styles.dot} ${i === page ? styles.dotActive : ""}`}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}

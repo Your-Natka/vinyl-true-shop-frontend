@@ -1,0 +1,39 @@
+.lotterySection {
+  padding: 4rem 2rem;
+  background: #f9f9fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #ddd;
+}
+
+.content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.text {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #444;
+}

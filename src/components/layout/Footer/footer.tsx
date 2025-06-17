@@ -1,7 +1,7 @@
 "use client";
 import styles from "../Footer/Footer.module.css";
 
-const Footer = () => {
+const FooterSection = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -50,4 +50,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterSection;
