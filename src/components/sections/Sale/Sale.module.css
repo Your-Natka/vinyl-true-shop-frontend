@@ -100,7 +100,7 @@
 }
 
 .active {
-  color: #2563eb;
+  color: #1b1b1b;
 }
 
 .disabled {
@@ -124,5 +124,5 @@
 }
 
 .dotActive {
-  background-color: #2563eb;
+  background-color: #8C8C8C;
 }
