@@ -33,18 +33,8 @@
   margin-top: auto;
 }
 
-.btnsContainer {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.3;
-  text-align: center;
-  color: #fff;
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-}
-
 .langBtn {
+  text-transform: uppercase;
   color: #fff;
   padding: 4px;
   background: none;
@@ -55,6 +45,22 @@
 
 .langBtn:hover {
   opacity: 0.8;
+}
+
+.topPanel {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnsContainer {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.3;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
 }
 
 .logoLink {

@@ -1,4 +1,4 @@
-import styles from '../Products/ProductCart.module.css';
+import styles from "../Products/ProductCart.module.css";
 
 
 interface Product {

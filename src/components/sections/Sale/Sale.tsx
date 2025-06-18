@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import ProductCard from '@/components/home/Products/ProductCart';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import styles from './Sale.module.css';
+import ProductCard from "@/components/home/Products/ProductCart";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import styles from "./Sale.module.css";
 
 const mockProducts = Array(6).fill({
-  id: '2',
-  title: 'Greatest Hits',
-  artist: 'Deep Purple',
+  id: "2",
+  title: "Greatest Hits",
+  artist: "Deep Purple",
   year: 1987,
-  genre: 'Grunge',
+  genre: "Grunge",
   price: 200,
-  image: '/albums/1.jpg',
+  image: "/albums/1.jpg",
 });
 
 const SaleSection = () => (
