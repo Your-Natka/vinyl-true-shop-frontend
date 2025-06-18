@@ -11,10 +11,12 @@ import scales from "@/../public/icons/scales.svg";
 import search from "@/../public/icons/search.svg";
 import mobileMenu from "@/../public/icons/mobileMenu.svg";
 import logo from "@/../public/icons/logo.svg";
+import { useTranslations } from "next-intl";
 
 const sections = ["hero", "products", "reviews", "about"];
 
 const Header = () => {
+  const t = useTranslations("Header");
   const [active, setActive] = useState("");
 
   useEffect(() => {
@@ -38,12 +40,7 @@ const Header = () => {
       {/* Ліві кнопки */}
       <div className={css.leftButtons}>
         <button className="btn">
-          <Image
-            src={mobileMenu}
-            alt="mobile menu icon"
-            width={24}
-            height={24}
-          />
+          <Image src={mobileMenu} alt="mobile menu icon" width={24} height={24} />
         </button>
         <button className="btn">
           <Image src={search} alt="search icon" width={24} height={24} />
@@ -60,35 +57,22 @@ const Header = () => {
         <Link href="#hero" className={active === "hero" ? css.activeLink : ""}>
           Головна
         </Link>
-        <Link
-          href="#products"
-          className={active === "products" ? css.activeLink : ""}
-        >
+        <Link href="#products" className={active === "products" ? css.activeLink : ""}>
           Популярне
         </Link>
-        <Link
-          href="#reviews"
-          className={active === "reviews" ? css.activeLink : ""}
-        >
+        <Link href="#reviews" className={active === "reviews" ? css.activeLink : ""}>
           Відгуки
         </Link>
-        <Link
-          href="#about"
-          className={active === "about" ? css.activeLink : ""}
-        >
+        <Link href="#about" className={active === "about" ? css.activeLink : ""}>
           Про нас
         </Link>
       </nav>
 
       {/* Пошук */}
       <div className={css.searchContainer}>
-        <input
-          type="text"
-          placeholder="Search artist, albums ..."
-          className={css.searchInput}
-        />
+        <input type="text" placeholder={t("search-text")} className={css.searchInput} />
         <div className={css.searchIcon}>
-          <Image src={search} alt="search icon" width={20} height={20} />
+          <Image src={search} alt="search icon" width={20} height={20} priority />
         </div>
       </div>
 

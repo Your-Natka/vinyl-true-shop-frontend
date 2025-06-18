@@ -1,0 +1,29 @@
+{
+  "Header": {
+    "search-text": "Пошук..."
+  },
+  "Sidebar": {
+    "locales": {
+      "en": "en",
+      "uk": "ua"
+    },
+    "navigation": {
+      "catalog": "Платівки",
+      "certificates": "Сертифікати",
+      "lottery": "Лотерея",
+      "reviews": "Відгуки",
+      "about": "Про нас",
+      "sale": "Розпродаж",
+      "delivery": "Доставка та оплата"
+    }
+  },
+  "HomePage": {
+    "title-1": "Vinyl",
+    "title-2": "True",
+    "button-show-catalog": "Каталог",
+    "left-box-text": "Для насолоди",
+    "right-box-text": "Для душі",
+    "sale-title": "Розпродаж",
+    "popular-title": "Популярне"
+  }
+}

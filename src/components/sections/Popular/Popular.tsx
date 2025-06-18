@@ -77,10 +77,7 @@ export default function Popular() {
   const [page, setPage] = useState(0);
   const totalPages = Math.ceil(products.length / PAGE_SIZE);
 
-  const visibleProducts = products.slice(
-    page * PAGE_SIZE,
-    (page + 1) * PAGE_SIZE
-  );
+  const visibleProducts = products.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
     <section className={styles.popular}>
@@ -90,13 +87,7 @@ export default function Popular() {
         <div className={styles.slider}>
           {visibleProducts.map((p) => (
             <div key={p.id} className={styles.card}>
-              <Image
-                src={p.image}
-                alt={p.title}
-                width={160}
-                height={160}
-                className={styles.image}
-              />
+              <Image src={p.image} alt={p.title} width={160} height={160} className={styles.image} />
               <div className={styles.info}>
                 <h3 className={styles.album}>{p.title}</h3>
                 <p className={styles.artist}>{p.artist}</p>
@@ -127,10 +118,7 @@ export default function Popular() {
 
       <div className={styles.dotsWrapper}>
         {Array.from({ length: totalPages }).map((_, i) => (
-          <span
-            key={i}
-            className={`${styles.dot} ${i === page ? styles.dotActive : ""}`}
-          />
+          <span key={i} className={`${styles.dot} ${i === page ? styles.dotActive : ""}`} />
         ))}
       </div>
     </section>

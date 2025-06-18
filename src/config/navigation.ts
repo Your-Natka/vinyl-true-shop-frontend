@@ -1,9 +1,9 @@
 export const mainNavLinks = [
-  { title: "Платівки", path: "/catalog" },
-  { title: "Сертифікати", path: "/#certificates" },
-  { title: "Лотерея", path: "/#lottery" },
-  { title: "Відгуки", path: "/#reviews" },
-  { title: "Про нас", path: "/#about" },
-  { title: "Розпродаж", path: "/#sale" },
-  { title: "Доставка та оплата", path: "/#delivery" },
+  { labelKey: "catalog", path: "/catalog" },
+  { labelKey: "certificates", path: "/#certificates" },
+  { labelKey: "lottery", path: "/#lottery" },
+  { labelKey: "reviews", path: "/#reviews" },
+  { labelKey: "about", path: "/#about" },
+  { labelKey: "sale", path: "/#sale" },
+  { labelKey: "delivery", path: "/#delivery" },
 ];
