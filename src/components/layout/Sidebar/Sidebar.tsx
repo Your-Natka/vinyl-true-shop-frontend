@@ -7,13 +7,14 @@ import Image from "next/image";
 import styles from "./Sidebar.module.css";
 import { mainNavLinks } from "@/config/navigation";
 import Contacts from "@/components/ui/Contacts/Contacts";
-import VinylFilters, {
-  FilterValues,
-} from "@/components/ui/VinylFilters/VinylFilters";
+import VinylFilters, { FilterValues } from "@/components/ui/VinylFilters/VinylFilters";
 import ellipseSidebar from "@/../public/icons/ellipseSidebar.svg";
 import arrowIcon from "@/../public/icons/arrowIcon.svg";
+import LocaleSwitcher from "@/components/layout/Sidebar/LocaleSwitcher";
+import { useTranslations } from "next-intl";
 
 const Sidebar = () => {
+  const t = useTranslations("Sidebar");
   const pathname = usePathname();
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
@@ -49,10 +50,8 @@ const Sidebar = () => {
     <aside className={styles.sidebarContainer}>
       <div className={styles.sidebarContent}>
         <div className={styles.topSection}>
-          <div className={styles.btnsContainer}>
-            <button className={styles.langBtn}>UA</button>
-            <span>/</span>
-            <button className={styles.langBtn}>EN</button>
+          <div className={styles.topPanel}>
+            <LocaleSwitcher />
           </div>
           <Link href="/" className={styles.logoLink}>
             <div className={styles.logo}>Vinyl True</div>
@@ -60,24 +59,13 @@ const Sidebar = () => {
           <nav>
             <ul className={styles.navList}>
               {mainNavLinks.map((link, index) => (
-                <li
-                  key={index}
-                  className={
-                    isActive(link.path) ? styles.navItemActive : styles.navItem
-                  }
-                >
+                <li key={index} className={isActive(link.path) ? styles.navItemActive : styles.navItem}>
                   {link.path === "/catalog" ? (
                     <>
                       <div className={styles.catalogItem}>
                         <Link href={link.path} className={styles.navLink}>
-                          <span
-                            className={
-                              isActive(link.path)
-                                ? styles.navTextActive
-                                : styles.navText
-                            }
-                          >
-                            {link.title}
+                          <span className={isActive(link.path) ? styles.navTextActive : styles.navText}>
+                            {t(`navigation.${link.labelKey}`)}
                           </span>
                         </Link>
                         <button
@@ -97,21 +85,12 @@ const Sidebar = () => {
                       </div>
 
                       {/* Винесений окремий компонент для фільтрів */}
-                      <VinylFilters
-                        onApplyFilters={handleApplyFilters}
-                        isOpen={isFilterOpen}
-                      />
+                      <VinylFilters onApplyFilters={handleApplyFilters} isOpen={isFilterOpen} />
                     </>
                   ) : (
                     <Link href={link.path} className={styles.navLink}>
-                      <span
-                        className={
-                          isActive(link.path)
-                            ? styles.navTextActive
-                            : styles.navText
-                        }
-                      >
-                        {link.title}
+                      <span className={isActive(link.path) ? styles.navTextActive : styles.navText}>
+                        {t(`navigation.${link.labelKey}`)}
                       </span>
                     </Link>
                   )}

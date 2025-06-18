@@ -1,0 +1,29 @@
+{
+  "Header": {
+    "search-text": "Search artists, albums..."
+  },
+  "Sidebar": {
+    "locales": {
+      "en": "en",
+      "uk": "ua"
+    },
+    "navigation": {
+      "catalog": "Vinyls",
+      "certificates": "Certificates",
+      "lottery": "Lottery",
+      "reviews": "Reviews",
+      "about": "About Us",
+      "sale": "Sale",
+      "delivery": "Delivery & Payment"
+    }
+  },
+  "HomePage": {
+    "title-1": "Vinyl",
+    "title-2": "True",
+    "button-show-catalog": "Catalog",
+    "left-box-text": "For pleasure",
+    "right-box-text": "For soul",
+    "sale-title": "Sale",
+    "popular-title": "Popular"
+  }
+}
