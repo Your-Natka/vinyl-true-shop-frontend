@@ -25,6 +25,7 @@
 
 /* Картка */
 .card {
+  position: relative;
   background-color: #fff;
   padding: 16px;
   min-width: 200px;
@@ -43,6 +44,28 @@
   height: auto;
   object-fit: cover;
   margin-bottom: 12px;
+}
+
+.heartIcon {
+  position: absolute;
+  bottom: 142px;
+  right: 17px;
+  background-color: rgba(0, 0, 0, 0.2); /* прозорий сірий */
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px); /* легкий розмитий ефект */
+  width: 80px;
+  height: 40px;
+  gap: 8px;
+}
+
+.heart {
+  width: 24px;
+  height: 24px;
+  fill: #fff; /* білий колір */
+  transition: fill 0.3s ease;
 }
 
 .info {

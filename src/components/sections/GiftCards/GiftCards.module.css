@@ -13,7 +13,8 @@
 .grid {
   position: relative;
   display: flex;
-  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
 }
 
 .slider {
@@ -38,6 +39,7 @@
 }
 
 .image {
+  position: relative;
   width: 182px;
   height: 120px;
   object-fit: cover;
@@ -53,16 +55,31 @@
 
 .heartIcon {
   position: absolute;
-  top: 90px;
+  bottom: 85px;
   right: 20px;
+  background-color: rgba(0, 0, 0, 0.2); /* прозорий сірий */
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px); /* легкий розмитий ефект */
+  width: 48px;
+  height: 40px;
 }
 
+.heart {
+  width: 24px;
+  height: 24px;
+  fill: #fff; /* білий колір */
+  transition: fill 0.3s ease;
+}
 .navRight {
   position: absolute;
-  right: 20px;
+  bottom: 0;
+  right: 0;
   display: flex;
-  gap: 10px;
-  bottom: 2px;
+  gap: 8px;
+  padding: 12px;
 }
 
 .arrow {
