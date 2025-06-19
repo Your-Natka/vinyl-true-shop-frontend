@@ -1,0 +1,73 @@
+.catalog {
+  padding: 40px;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  padding: 16px;
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.artist {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.price {
+  font-weight: bold;
+  margin-top: 8px;
+  color: #000;
+}
+
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.pageLink {
+  padding: 8px 14px;
+  background: #ddd;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.pageLink:hover {
+  background: #bbb;
+}
+
+.active {
+  background: #000;
+  color: #fff;
+}

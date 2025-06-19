@@ -1,6 +1,9 @@
+'use client';
+
 import Image from "next/image";
-import styles from "./Hero.module.css";
+import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
+import styles from "./Hero.module.css";
 
 const albumCovers = [
   "/albums/1.jpg",
@@ -15,6 +18,11 @@ const albumCovers = [
 
 export default function Hero() {
   const t = useTranslations("HomePage");
+  const router = useRouter();
+
+  const handleShowCatalog = () => {
+    router.push("/catalog");
+  };
 
   return (
     <section className={styles.heroSection}>
@@ -37,17 +45,25 @@ export default function Hero() {
             {t("title-2")}
           </h1>
           <div className={styles.ctaWrapper}>
-            <button className={styles.ctaButton}>{t("button-show-catalog")}</button>
+            <button className={styles.ctaButton} onClick={handleShowCatalog}>
+              {t("button-show-catalog")}
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Галерея */}
+      {/* Галерея альбомів */}
       <div className={styles.albumGallery}>
         <div className={styles.albumRow}>
           {albumCovers.map((src, idx) => (
             <div key={idx} className={styles.albumItem}>
-              <Image src={src} alt={`album-${idx}`} width={130} height={130} className={styles.albumImage} />
+              <Image
+                src={src}
+                alt={`album-${idx}`}
+                width={130}
+                height={130}
+                className={styles.albumImage}
+              />
             </div>
           ))}
         </div>

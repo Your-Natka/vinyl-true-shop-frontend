@@ -84,13 +84,17 @@
 }
 
 .ctaButton {
-  padding: 0.6rem 1.8rem;
-  font-size: 1rem;
+  padding: 12px 28px;
+  font-size: 1.1rem;
   background-color: #4f46e5;
   color: white;
   border: none;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+  transition: background-color 0.2s ease;
   cursor: pointer;
+}
+
+.ctaButton:hover {
+  background-color: #444;
 }
 
 .boxLeft, .boxRight {
