@@ -1,6 +1,11 @@
+"use client";
+
 import * as XLSX from "xlsx";
 import styles from "../catalog/Catalog.module.css";
 import Link from "next/link";
+import Image from "next/image";
+import Product from "@/components/products_cart/Products/ProductCart";
+
 
 interface Product {
   id: number;
@@ -40,7 +45,16 @@ export default async function CatalogPage({ searchParams }: { searchParams?: { p
     <div className={styles.catalog}>
       <p className={styles.text}> головна/каталог/обране</p>
       <h1 className={styles.heading}>Вінілові платівки</h1>
-
+      <div className={styles.line}>
+        <p className={styles.text_second}> всі/в наявності</p>
+        <p className={styles.text_third}> сортувати за замовчуванням</p>
+        <Image 
+        src="/icons/down.svg" 
+        alt="Sort Icon" 
+        width={24} 
+        height={24} 
+        className={styles.icon} />
+      </div>
       <div className={styles.grid}>
         {currentProducts.map((product) => (
           <div key={product.id} className={styles.card}>
@@ -51,6 +65,7 @@ export default async function CatalogPage({ searchParams }: { searchParams?: { p
             />
             <h3 className={styles.title}>{product.title}</h3>
             <p className={styles.artist}>{product.artist}</p>
+            <p className={styles.genre}>{product.genre}</p>
             <p className={styles.price}>{product.price} ₴</p>
           </div>
         ))}

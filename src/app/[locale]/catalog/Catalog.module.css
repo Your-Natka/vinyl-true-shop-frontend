@@ -1,33 +1,56 @@
 .catalog {
-  padding: 40px;
-  background: #f9f9f9;
-  min-height: 100vh;
+  padding: 48px 24px 40px;
+  display: flex;
+  gap: 32px;
 }
 .text {
     font-size: 14px;
     font-weight: 400;
+    margin-bottom: 32px;
 }
+
+.line {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.icon {
+    position: right;;
+}
+.text_second,
+.text_third {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+.text_third {
+    position: right;
+}
+
 .heading {
-  font-size: 2rem;
-  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 40px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  flex-grow: 1;
 }
 
 .card {
   background: #fff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-  padding: 16px;
+  padding: 12px;
   text-align: center;
 }
 
 .image {
   width: 100%;
-  height: 220px;
+  height: auto;
   object-fit: cover;
 }
 
