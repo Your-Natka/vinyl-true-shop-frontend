@@ -1,5 +1,5 @@
 .lottery {
-  padding: 48px 20px;
+  padding: 48px 24px 40px;
 }
 
 .container {
@@ -39,8 +39,24 @@
   line-height: 1.5;
 }
 
+.instagramLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 16px;
+  transition: opacity 0.2s ease;
+}
+
+.instagramLink:hover {
+  opacity: 0.75;
+}
+
 .hashtag {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 400;
   color: #999;
 }
 

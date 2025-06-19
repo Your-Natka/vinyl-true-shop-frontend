@@ -23,7 +23,22 @@ export default function Lottery() {
           <p className={styles.paragraph_two}>
             Анонси та самі розіграші відбуваються в Instagram, а переможця обираємо за допомогою рандомайзера. Слідкуйте за новинами Vinyl True на нашій сторінці
           </p>
-          <div className={styles.hashtag}>#Vinyl_true</div>
+          <a
+            href="https://www.instagram.com/vinyl_true?igsh=Nnl2NDJuN2FkYmts"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.instagramLink}
+          >
+            <Image
+              src="/icons/instagram_b.svg"
+              alt="Instagram"
+              width={24}
+              height={24}
+              className={styles.icon}
+            />
+            <span className={styles.hashtag}>Vinyl_true</span>
+          </a>
+        
         </div>
 
         {/* Right Block */}

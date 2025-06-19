@@ -7,9 +7,20 @@ import Image from "next/image";
 const Contacts = ({}) => {
   return (
     <div className={styles.icons}>
-      <button>
-        <Image src={Instagram} alt="Instagram icon" />
-      </button>
+      <a
+            href="https://www.instagram.com/vinyl_true?igsh=Nnl2NDJuN2FkYmts"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.instagramLink}
+          >
+            <Image
+              src="/icons/instagram.svg"
+              alt="Instagram"
+              width={24}
+              height={24}
+              className={styles.icon}
+            />
+      </a>
       <button>
         <Image src={Phone} alt="Phone icon" />
       </button>
