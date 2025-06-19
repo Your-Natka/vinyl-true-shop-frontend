@@ -1,92 +1,138 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import { useState } from "react";
 import Image from "next/image";
-import style from "./Reviews.module.css";
+import styles from "./Reviews.module.css";
 
 const reviews = [
   {
-    img: "/reviews/1.jpg",
+    id: 1,
+    image: "/reviews/1.jpg",
     avatar: "/avatars/1.jpg",
     text: "Все супер! Уже друге замовлення — і знову топ.",
     author: "Lyandra Cromwell",
+    rating: 5,
   },
   {
-    img: "/reviews/1.jpg",
+    id: 2,
+    image: "/reviews/1.jpg",
     avatar: "/avatars/1.jpg",
     text: "Платівки якісні, доставили швидко.",
     author: "Mark Benson",
+    rating: 4,
   },
   {
-    img: "/reviews/1.jpg",
+    id: 3,
+    image: "/reviews/1.jpg",
     avatar: "/avatars/1.jpg",
     text: "Дякую за рідкісний реліз! Дуже задоволений.",
     author: "Anna Kostina",
+    rating: 5,
   },
   {
-    img: "/reviews/1.jpg",
+    id: 4,
+    image: "/reviews/1.jpg",
     avatar: "/avatars/1.jpg",
     text: "Професіонали своєї справи!",
     author: "Ivan Petrenko",
+    rating: 5,
   },
   {
-    img: "/reviews/1.jpg",
+    id: 5,
+    image: "/reviews/1.jpg",
     avatar: "/avatars/1.jpg",
     text: "Найкращий сервіс для меломанів!",
     author: "Olga Melnyk",
+    rating: 5,
+  },
+  {
+    id: 6,
+    image: "/reviews/1.jpg",
+    avatar: "/avatars/1.jpg",
+    text: "Замовляв вперше, все сподобалось.",
+    author: "Oleg Ivanov",
+    rating: 5,
   },
 ];
-const Reviews = () => {
+
+const PAGE_SIZE = 5;
+
+export default function Reviews() {
+  const [page, setPage] = useState(0);
+  const totalPages = Math.ceil(reviews.length / PAGE_SIZE);
+  const visible = reviews.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+
   return (
-    <section id="reviews" className={style.section}>
-      <h2 className={style.heading}>Відгуки</h2>
-      <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        spaceBetween={20}
-        slidesPerView={2}
-        navigation
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        breakpoints={{
-          640: { slidesPerView: 2 },
-          768: { slidesPerView: 4 },
-          1024: { slidesPerView: 5 },
-        }}
-      >
-        {reviews.map((review, idx) => (
-          <SwiperSlide key={idx}>
-            <div className={style.card}>
-              <div className={style.imageContainer}>
-                <Image
-                  src={review.img}
-                  alt={review.author}
-                  fill
-                  className={style.image}
-                />
-              </div>
-              <p className={style.text}>{review.text}</p>
-              <div className={style.authorBlock}>
-                <div className={style.avatar}>
+    <section className={styles.reviews}>
+      <h2 className={styles.title}>Відгуки</h2>
+
+      <div className={styles.sliderWrapper}>
+        <div className={styles.slider}>
+          {visible.map((r) => (
+            <div key={r.id} className={styles.card}>
+              <Image
+                src={r.image}
+                alt="review"
+                width={183}
+                height={183}
+                className={styles.image}
+              />
+              <div className={styles.info}>
+                <p className={styles.text}>{r.text}</p>
+
+                <div className={styles.stars}>
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <span
+                      key={i}
+                      className={i < r.rating ? styles.starActive : styles.star}
+                    >
+                      ★
+                    </span>
+                  ))}
+                </div>
+
+                <div className={styles.authorBlock}>
                   <Image
-                    src={review.avatar}
-                    alt={review.author}
+                    src={r.avatar}
+                    alt={r.author}
                     width={24}
                     height={24}
-                    className={style.avatarImage}
+                    className={styles.avatar}
                   />
+                  <span className={styles.author}>{r.author}</span>
                 </div>
-                <p className={style.author}>{review.author}</p>
               </div>
             </div>
-          </SwiperSlide>
+          ))}
+        </div>
+
+        <div className={styles.navRight}>
+          <button
+            className={`${styles.arrow} ${page === 0 ? styles.disabled : styles.active}`}
+            onClick={() => setPage((p) => Math.max(p - 1, 0))}
+            disabled={page === 0}
+          >
+            &lt;
+          </button>
+          <button
+            className={`${styles.arrow} ${page === totalPages - 1 ? styles.disabled : styles.active}`}
+            onClick={() => setPage((p) => Math.min(p + 1, totalPages - 1))}
+            disabled={page === totalPages - 1}
+          >
+            &gt;
+          </button>
+        </div>
+      </div>
+
+      <div className={styles.dotsWrapper}>
+        {Array.from({ length: totalPages }).map((_, i) => (
+          <span
+            key={i}
+            className={`${styles.dot} ${i === page ? styles.dotActive : ""}`}
+            onClick={() => setPage(i)}
+          />
         ))}
-      </Swiper>
+      </div>
     </section>
   );
-};
-
-export default Reviews;
+}
