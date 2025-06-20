@@ -35,7 +35,8 @@ export default function GiftCards() {
             <div key={id} className={styles.card}>
               <img src={image} alt={label} className={styles.image} />
               <div className={styles.heartIcon}>
-                <Image className={styles.heart}src="/icons/heart_w.svg" alt="heart" width={47} height={47} />
+                <Image className={styles.heart}src="/icons/heart_white, stroke=1.svg" 
+                alt="heart" width={47} height={47} />
               </div>
               <div className={styles.label}>{label}</div>
             </div>

@@ -1,5 +1,4 @@
 import styles from "@/components/ui/Contacts/Contacts.module.css";
-import Instagram from "@/../public/icons/instagram.svg";
 import Phone from "@/../public/icons/phone.svg";
 import Message from "@/../public/icons/message.svg";
 import Image from "next/image";
