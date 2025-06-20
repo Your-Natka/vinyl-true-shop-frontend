@@ -1,3 +1,5 @@
+https://www.figma.com/design/a0kTKwzusNCmfAk1UGH2XX/Vinyl-True?node-id=182264-21188&t=FoSrBMZwPVi6IECE-0
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
