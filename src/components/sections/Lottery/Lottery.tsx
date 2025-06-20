@@ -18,26 +18,30 @@ export default function Lottery() {
         <div className={styles.left}>
           <h2 className={styles.title}>Лотерея</h2>
           <p className={styles.paragraph}>
-            Мрієш поповнити свою колекцію вінілом або зробити перший крок у світ аналогового звучання? Ми даруємо тобі таку можливість!
+            <p>
+              Бери участь у розіграші програвача серед покупців, які здійснили замовлення на суму
+              від 1500 грн у червні. Переможця оголосимо 1 липня.
+            </p>
           </p>
           <p className={styles.paragraph_two}>
-            Анонси та самі розіграші відбуваються в Instagram, а переможця обираємо за допомогою рандомайзера. Слідкуйте за новинами Vinyl True на нашій сторінці
+            Анонси та самі розіграші відбуваються в Instagram, а переможця обираємо за допомогою рандомайзера. 
+            Слідкуйте за новинами Vinyl True на нашій сторінці &nbsp;
+            <a
+              href="https://www.instagram.com/vinyl_true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.instagramLink}
+            >
+              <Image
+                src="/icons/instagram_b.svg"
+                alt="Instagram"
+                width={16}
+                height={16}
+                className={styles.icon}
+              />
+              <span className={styles.hashtag}>Vinyl_true</span>
+            </a>
           </p>
-          <a
-            href="https://www.instagram.com/vinyl_true?igsh=Nnl2NDJuN2FkYmts"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.instagramLink}
-          >
-            <Image
-              src="/icons/instagram_b.svg"
-              alt="Instagram"
-              width={24}
-              height={24}
-              className={styles.icon}
-            />
-            <span className={styles.hashtag}>Vinyl_true</span>
-          </a>
         
         </div>
 
@@ -48,10 +52,12 @@ export default function Lottery() {
             <div className={styles.description}>[Для душі]</div>
             <div className={styles.images}>
               {images.map((src, idx) => (
-                <img
+                <Image
                   key={idx}
                   src={src}
-                  alt={`lottery-${idx}`}
+                  alt={`Розіграш ${idx + 1}`}
+                  width={400}
+                  height={300}
                   className={styles.image}
                 />
               ))}

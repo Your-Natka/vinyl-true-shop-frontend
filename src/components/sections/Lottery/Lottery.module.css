@@ -101,7 +101,9 @@
   object-fit: cover;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
+.icon {
+  vertical-align: middle;
+}
 
 /* Нижнє зображення — під 3-ю верхньою */
 .image:nth-child(4) {
