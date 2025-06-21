@@ -1,10 +1,10 @@
 import React from "react";
 
-interface authProps {
+interface AuthProps {
   children?: React.ReactNode;
 }
 
-const Auth = ({ children }: authProps) => {
+const Auth = ({ children }: AuthProps) => {
   return (
     <div>
       <h1>Authentication Page</h1>
