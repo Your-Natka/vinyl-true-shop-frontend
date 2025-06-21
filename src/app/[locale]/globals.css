@@ -70,12 +70,23 @@ button {
   margin: 0;
   cursor: pointer;
 }
+
 .app-layout {
   display: flex;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
+.app-layout > :global(.sidebarContainer) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 252px; /* ширина сайдбару */
+  overflow-y: auto;
+  border-right: 1px solid #ddd;
+  z-index: 100;
+}
 /* Обгортка для основного контенту (все крім сайдбару) */
 .main-content {
   flex: 1;
@@ -85,6 +96,24 @@ button {
   margin-left: 252px; 
   width: calc(100% - 252px);
 }
+.main-content > header {
+  position: fixed;
+  top: 0;
+  left: 252px;
+  right: 0;
+  height: -84px;
+  border-bottom: 1px solid #ddd;
+  z-index: 110;
+  display: flex;
+  align-items: center;
+}
+
+.main-content > main {
+  margin-top: 84px; /* відступ під header */
+  height: calc(100vh - 84px);
+  overflow-y: auto;
+}
+
 .container {
   max-width: 1190px;
   margin: 0 auto;
