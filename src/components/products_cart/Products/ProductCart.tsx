@@ -1,5 +1,5 @@
 import styles from "../Products/ProductCart.module.css";
-
+import Image from "next/image";
 
 interface Product {
   id: string;
@@ -14,7 +14,8 @@ interface Product {
 const ProductCard = ({ title, artist, year, genre, price, image }: Product) => {
   return (
     <div className={styles.card}>
-      <img src={image} alt={title} className={styles.image} />
+      <Image src={image} alt={title} 
+      className={styles.image} />
       <div className={styles.content}>
         <h3 className={styles.title}>{title}</h3>
         <p>{artist}</p>

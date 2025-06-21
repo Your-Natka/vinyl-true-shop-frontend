@@ -33,7 +33,7 @@ export default function GiftCards() {
         <div className={styles.slider}>
           {visibleCards.map(({ id, image, label }) => (
             <div key={id} className={styles.card}>
-              <img src={image} alt={label} className={styles.image} />
+              <Image src={image} alt={label} className={styles.image} />
               <div className={styles.heartIcon}>
                 <Image className={styles.heart}src="/icons/heart_white, stroke=1.svg" 
                 alt="heart" width={47} height={47} />
