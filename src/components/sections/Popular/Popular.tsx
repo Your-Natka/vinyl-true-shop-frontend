@@ -80,7 +80,7 @@ export default function Popular() {
   const visibleProducts = products.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
-    <section className={styles.popular}>
+    <section id="popular" className={styles.popular}>
       <h2 className={styles.title}>Популярні</h2>
 
       <div className={styles.sliderWrapper}>

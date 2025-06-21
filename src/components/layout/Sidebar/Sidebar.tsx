@@ -34,6 +34,16 @@ const Sidebar = () => {
 
     return pathname === path;
   };
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+  e.preventDefault();
+  if (typeof window !== "undefined") {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.replaceState(null, "", `#${id}`);
+    }
+  }
+};
 
   const toggleFilter = () => {
     setIsFilterOpen(!isFilterOpen);
@@ -63,11 +73,23 @@ const Sidebar = () => {
                   {link.path === "/catalog" ? (
                     <>
                       <div className={styles.catalogItem}>
-                        <Link href={link.path} className={styles.navLink}>
-                          <span className={isActive(link.path) ? styles.navTextActive : styles.navText}>
-                            {t(`navigation.${link.labelKey}`)}
-                          </span>
-                        </Link>
+                        {link.path.includes("#") ? (
+                          <a
+                            href={link.path}
+                            onClick={(e) => handleAnchorClick(e, link.path.split("#")[1])}
+                            className={styles.navLink}
+                          >
+                            <span className={isActive(link.path) ? styles.navTextActive : styles.navText}>
+                              {t(`navigation.${link.labelKey}`)}
+                            </span>
+                          </a>
+                        ) : (
+                          <Link href={link.path} className={styles.navLink}>
+                            <span className={isActive(link.path) ? styles.navTextActive : styles.navText}>
+                              {t(`navigation.${link.labelKey}`)}
+                            </span>
+                          </Link>
+                        )}
                         <button
                           onClick={toggleFilter}
                           className={`${styles.arrowButton} ${isFilterOpen ? styles.arrowRotated : ""}`}

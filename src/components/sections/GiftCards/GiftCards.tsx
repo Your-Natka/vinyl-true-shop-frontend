@@ -26,7 +26,7 @@ export default function GiftCards() {
   const visibleCards = giftcards.slice(start, start + CARDS_PER_PAGE);
 
   return (
-    <section className={styles.giftCardsSection}>
+    <section id="giftcards" className={styles.giftCardsSection}>
       <h2 className={styles.title}>Подарункові сертифікати</h2>
 
       <div className={styles.grid}>

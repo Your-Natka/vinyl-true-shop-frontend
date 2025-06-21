@@ -79,7 +79,7 @@ export default function Sale() {
   const visibleProducts = products.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
-    <section className={styles.sale}>
+    <section id="sale" className={styles.sale}>
       <h2 className={styles.title}>Розпродаж</h2>
 
       <div className={styles.sliderWrapper}>

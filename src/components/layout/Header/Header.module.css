@@ -6,6 +6,7 @@
   width: 100%;
   margin: 0 auto;       
   padding: 15px 20px;
+  background-color: var(--sidebar-bg);
   position: relative;   
   overflow-x: hidden; 
 }

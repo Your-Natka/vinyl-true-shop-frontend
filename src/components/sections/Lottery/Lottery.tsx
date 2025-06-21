@@ -12,7 +12,7 @@ const images = [
 
 export default function Lottery() {
   return (
-    <section className={styles.lottery}>
+    <section id="lottery" className={styles.lottery}>
       <div className={styles.container}>
         {/* Left Block */}
         <div className={styles.left}>

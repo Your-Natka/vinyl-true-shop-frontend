@@ -63,7 +63,7 @@ export default function Reviews() {
   const visible = reviews.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
-    <section className={styles.reviews}>
+    <section id="reviews" className={styles.reviews}>
       <h2 className={styles.title}>Відгуки</h2>
 
       <div className={styles.sliderWrapper}>
