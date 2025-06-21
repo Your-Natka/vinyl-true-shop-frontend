@@ -89,8 +89,11 @@ export default function Popular() {
             <div key={p.id} className={styles.card}>
               <Image src={p.image} alt={p.title} width={160} height={160} className={styles.image} />
               <div className={styles.heartIcon}>
-                <Image className={styles.heart} src="/icons/heart_white, stroke=1.svg" alt="heart" width={24} height={24} />
-                <Image className={styles.heart} src="/icons/scales_white, stroke=1.svg" alt="heart" width={24} height={24} />
+                <Image className={styles.heart} 
+                src="/icons/heart_white, stroke=1.svg" 
+                alt="heart" width={24} height={24} />
+                <Image className={styles.heart} src="/icons/scales_white, stroke=1.svg" 
+                alt="heart" width={24} height={24} />
               </div>
               <div className={styles.info}>
                 <h3 className={styles.album}>{p.title}</h3>
