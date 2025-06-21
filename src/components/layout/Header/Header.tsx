@@ -6,12 +6,13 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import profile from "@/../public/icons/profile.svg";
-import cart from "@/../public/icons/cart.svg";
 import scales from "@/../public/icons/scales.svg";
 import search from "@/../public/icons/search.svg";
 import mobileMenu from "@/../public/icons/mobileMenu.svg";
 import logo from "@/../public/icons/logo.svg";
 import { useTranslations } from "next-intl";
+import CartIcon from "@/components/CartIcon/CartIcon";
+
 
 const sections = ["hero", "products", "reviews", "about"];
 
@@ -81,9 +82,9 @@ const Header = () => {
         <Link href="#" className={`btn ${css.scalesButton}`}>
           <Image src={scales} alt="scales icon" width={24} height={24} />
         </Link>
-        <Link href="/shop/basket" className="btn">
-          <Image src={cart} alt="cart icon" width={24} height={24} />
-        </Link>
+        <div className="btn">
+          <CartIcon />
+        </div>
         <Link href="/auth" className="btn">
           <Image src={profile} alt="profile icon" width={24} height={24} />
         </Link>

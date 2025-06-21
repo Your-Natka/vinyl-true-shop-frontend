@@ -1,10 +1,8 @@
-const BasketPage = () => {
-  return (
-    <div>
-      <h1>Basket Page</h1>
-      {/* Тут контент кошика */}
-    </div>
+export default function BasketPage() {
+ return (
+    <main style={{ padding: "2rem" }}>
+      <h1>Корзина</h1>
+      <p>Тут буде список товарів у вашій корзині.</p>
+    </main>
   );
-};
-
-export default BasketPage;
+}

@@ -7,7 +7,7 @@ import styles from "./Reviews.module.css";
 const reviews = [
   {
     id: 1,
-    image: "/reviews/1.jpg",
+    image: "/images/reviews_1.jpg",
     avatar: "/avatars/1.jpg",
     text: "Все супер! Уже друге замовлення — і знову топ.",
     author: "Lyandra Cromwell",
@@ -15,7 +15,7 @@ const reviews = [
   },
   {
     id: 2,
-    image: "/reviews/1.jpg",
+    image: "/images/reviews_1.jpg",
     avatar: "/avatars/1.jpg",
     text: "Платівки якісні, доставили швидко.",
     author: "Mark Benson",
@@ -23,7 +23,7 @@ const reviews = [
   },
   {
     id: 3,
-    image: "/reviews/1.jpg",
+    image: "/images/reviews_1.jpg",
     avatar: "/avatars/1.jpg",
     text: "Дякую за рідкісний реліз! Дуже задоволений.",
     author: "Anna Kostina",
@@ -31,7 +31,7 @@ const reviews = [
   },
   {
     id: 4,
-    image: "/reviews/1.jpg",
+    image: "/images/reviews_1.jpg",
     avatar: "/avatars/1.jpg",
     text: "Професіонали своєї справи!",
     author: "Ivan Petrenko",
@@ -39,7 +39,7 @@ const reviews = [
   },
   {
     id: 5,
-    image: "/reviews/1.jpg",
+    image: "/images/reviews_1.jpg",
     avatar: "/avatars/1.jpg",
     text: "Найкращий сервіс для меломанів!",
     author: "Olga Melnyk",
@@ -47,7 +47,7 @@ const reviews = [
   },
   {
     id: 6,
-    image: "/reviews/1.jpg",
+    image: "/images/reviews_1.jpg",
     avatar: "/avatars/1.jpg",
     text: "Замовляв вперше, все сподобалось.",
     author: "Oleg Ivanov",

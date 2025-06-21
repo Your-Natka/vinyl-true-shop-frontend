@@ -5,15 +5,15 @@ import styles from "./GiftCards.module.css";
 import Image from "next/image";
 
 const giftcards = [
-  { id: 1, image: "/images/vinyl+bag.jpg", label: "Подарунковий сертифікат 200 грн." },
-  { id: 2, image: "/images/vinyl+bag.jpg", label: "Подарунковий сертифікат 300 грн." },
-  { id: 3, image: "/images/vinyl+bag.jpg", label: "Подарунковий сертифікат 500 грн." },
-  { id: 4, image: "/images/vinyl+bag.jpg", label: "Подарунковий сертифікат 800 грн." },
-  { id: 5, image: "/images/vinyl+bag.jpg", label: "Подарунковий сертифікат 1000 грн." },
-  { id: 6, image: "/images/vinyl+bag.jpg", label: "Подарунковий сертифікат 1500 грн." },
-  { id: 7, image: "/images/vinyl+bag.jpg", label: "Подарунковий сертифікат 2000 грн." },
-  { id: 8, image: "/images/vinyl+bag.jpg", label: "Подарунковий сертифікат 3000 грн." },
-  { id: 9, image: "/images/vinyl+bag.jpg", label: "Подарунковий сертифікат 5000 грн." },
+  { id: 1, image: "/images/vinyl_bag.jpg", label: "Подарунковий сертифікат 200 грн." },
+  { id: 2, image: "/images/vinyl_bag.jpg", label: "Подарунковий сертифікат 300 грн." },
+  { id: 3, image: "/images/vinyl_bag.jpg", label: "Подарунковий сертифікат 500 грн." },
+  { id: 4, image: "/images/vinyl_bag.jpg", label: "Подарунковий сертифікат 800 грн." },
+  { id: 5, image: "/images/vinyl_bag.jpg", label: "Подарунковий сертифікат 1000 грн." },
+  { id: 6, image: "/images/vinyl_bag.jpg", label: "Подарунковий сертифікат 1500 грн." },
+  { id: 7, image: "/images/vinyl_bag.jpg", label: "Подарунковий сертифікат 2000 грн." },
+  { id: 8, image: "/images/vinyl_bag.jpg", label: "Подарунковий сертифікат 3000 грн." },
+  { id: 9, image: "/images/vinyl_bag.jpg", label: "Подарунковий сертифікат 5000 грн." },
 ];
 
 const CARDS_PER_PAGE = 5;
@@ -33,7 +33,11 @@ export default function GiftCards() {
         <div className={styles.slider}>
           {visibleCards.map(({ id, image, label }) => (
             <div key={id} className={styles.card}>
-              <Image src={image} alt={label} className={styles.image} />
+              <Image src={image}
+                alt={label}
+                width={300}
+                height={200}
+                className={styles.image} />
               <div className={styles.heartIcon}>
                 <Image className={styles.heart}src="/icons/heart_white, stroke=1.svg" 
                 alt="heart" width={47} height={47} />

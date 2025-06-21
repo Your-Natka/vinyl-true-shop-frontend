@@ -1,4 +1,5 @@
 "use client";
+
 import { Locale, useTranslations } from "next-intl";
 import { routing } from "@/i18n/routing";
 import React, { MouseEventHandler, useTransition } from "react";
