@@ -67,7 +67,7 @@ export default function AccountPage() {
           Вийти</Link></li>
           <li>
             <Image src="/icons/bin.svg" alt="Bin" width={24} height={24} />
-            <button className={styles.deleteBtn, " ", styles.texts} onClick={handleDelete}>
+            <button className={`${styles.deleteBtn} ${styles.texts}`} onClick={handleDelete}>
               Видалити акаунт
             </button>
           </li>
