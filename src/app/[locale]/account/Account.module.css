@@ -16,7 +16,15 @@
 .sidebar li {
   margin-bottom: 0.5rem;
 }
-
+.title {
+  margin-top: 24px;
+  margin-bottom: 18px;
+}
+.text {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
 .formSection {
   flex-grow: 1;
 }
@@ -33,16 +41,27 @@
   border-radius: 5px;
 }
 
-.saveBtn,
+.saveBtn {
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  color: black;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
 .deleteBtn {
   padding: 0.75rem 1.5rem;
   margin-top: 1rem;
-  background-color: black;
-  color: white;
+  color: red;
   border: none;
   cursor: pointer;
 }
-
-.deleteBtn {
-  background-color: red;
+.texts {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: red;
 }

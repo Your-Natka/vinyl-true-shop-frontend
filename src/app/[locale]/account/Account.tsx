@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import styles from "./Account.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 interface UserData {
   firstName: string;
@@ -44,26 +45,29 @@ export default function AccountPage() {
   return (
     <div className={styles.accountPage}>
       <aside className={styles.sidebar}>
-        <h2>Редагувати мої дані</h2>
+        <h3 className={styles.title}>Редагувати мої дані</h3>
         <ul>
-          <li><strong>Мої дані</strong></li>
+          <li><Link href="#">Мої дані</Link></li>
           <li><Link href="#">Моя адреса</Link></li>
           <li><Link href="#">Методи оплати</Link></li>
         </ul>
 
-        <h2>Мої замовлення</h2>
+        <h3 className={styles.title}>Мої замовлення</h3>
         <ul>
           <li><Link href="#">В процесі</Link></li>
           <li><Link href="#">Виконані</Link></li>
           <li><Link href="#">Всі</Link></li>
         </ul>
 
-        <ul>
+        <ul className={styles.text}>
           <li><Link href="#">Обране</Link></li>
           <li><Link href="#">Порівняння</Link></li>
-          <li><Link href="#">Вийти</Link></li>
+          <li><Link href="#">
+          <Image src="/icons/exit.svg" alt="exit" width={24} height={24} />
+          Вийти</Link></li>
           <li>
-            <button className={styles.deleteBtn} onClick={handleDelete}>
+            <Image src="/icons/bin.svg" alt="Bin" width={24} height={24} />
+            <button className={styles.deleteBtn, " ", styles.texts} onClick={handleDelete}>
               Видалити акаунт
             </button>
           </li>
