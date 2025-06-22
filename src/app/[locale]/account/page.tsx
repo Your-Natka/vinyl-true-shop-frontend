@@ -1,5 +1,9 @@
-const Page = ({}) => {
-  return <div>Page</div>;
-};
+import AccountForm from "./Account";
 
-export default Page;
+export default function AccountPage() {
+  return (
+    <main>
+      <AccountForm />
+    </main>
+  );
+}

@@ -1,5 +1,8 @@
+"use client";
+
 import styles from "../Products/ProductCart.module.css";
 import Image from "next/image";
+
 
 interface Product {
   id: string;

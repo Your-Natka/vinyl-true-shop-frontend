@@ -85,7 +85,7 @@ const Header = () => {
         <div className="btn">
           <CartIcon />
         </div>
-        <Link href="/auth" className="btn">
+        <Link href="/${locale}/account" className="btn">
           <Image src={profile} alt="profile icon" width={24} height={24} />
         </Link>
       </div>

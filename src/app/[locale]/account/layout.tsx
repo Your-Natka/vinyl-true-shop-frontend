@@ -1,5 +1,9 @@
-const Layout = ({}) => {
-  return <div>Page</div>;
-};
+import React from "react";
 
-export default Layout;
+export default function AccountLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <div>{children}</div>;
+}
