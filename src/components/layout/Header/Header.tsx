@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale, useTranslations } from "next-intl";
 import css from "@/components/layout/Header/Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,14 +11,14 @@ import scales from "@/../public/icons/scales.svg";
 import search from "@/../public/icons/search.svg";
 import mobileMenu from "@/../public/icons/mobileMenu.svg";
 import logo from "@/../public/icons/logo.svg";
-import { useTranslations } from "next-intl";
+import {  } from "next-intl";
 import CartIcon from "@/components/CartIcon/CartIcon";
 
 
-const sections = ["hero", "products", "reviews", "about"];
-
 const Header = () => {
   const t = useTranslations("Header");
+  const locale = useLocale();
+  const sections = ["hero", "products", "reviews", "about"];
   const [active, setActive] = useState("");
 
   useEffect(() => {
@@ -85,7 +86,7 @@ const Header = () => {
         <div className="btn">
           <CartIcon />
         </div>
-        <Link href="/${locale}/account" className="btn">
+        <Link href={`/${locale}/account`} className="btn">
           <Image src={profile} alt="profile icon" width={24} height={24} />
         </Link>
       </div>

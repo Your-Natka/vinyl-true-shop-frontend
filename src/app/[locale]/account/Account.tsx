@@ -43,62 +43,85 @@ export default function AccountPage() {
   };
 
   return (
-    <div className={styles.accountPage}>
+    <div className={styles.container}>
       <aside className={styles.sidebar}>
-        <h3 className={styles.title}>Редагувати мої дані</h3>
-        <ul>
+        <h3 className={styles.sectionTitle}>Редагувати мої дані</h3>
+        <ul className={styles.linkList}>
           <li><Link href="#">Мої дані</Link></li>
           <li><Link href="#">Моя адреса</Link></li>
           <li><Link href="#">Методи оплати</Link></li>
         </ul>
 
-        <h3 className={styles.title}>Мої замовлення</h3>
-        <ul>
+        <h3 className={styles.sectionTitle}>Мої замовлення</h3>
+        <ul className={styles.linkList}>
           <li><Link href="#">В процесі</Link></li>
           <li><Link href="#">Виконані</Link></li>
           <li><Link href="#">Всі</Link></li>
         </ul>
 
-        <ul className={styles.text}>
-          <li><Link href="#">Обране</Link></li>
-          <li><Link href="#">Порівняння</Link></li>
-          <li><Link href="#">
-          <Image src="/icons/exit.svg" alt="exit" width={24} height={24} />
-          Вийти</Link></li>
-          <li>
-            <Image src="/icons/bin.svg" alt="Bin" width={24} height={24} />
-            <button className={`${styles.deleteBtn} ${styles.texts}`} onClick={handleDelete}>
-              Видалити акаунт
-            </button>
+        <ul className={styles.linkList}>
+          <li className={styles.iconItem}>
+            <Image src="/icons/exit.svg" alt="exit" width={20} height={20} />
+            <span>Вийти</span>
+          </li>
+          <li className={styles.deleteItem} onClick={handleDelete}>
+            <Image src="/icons/bin.svg" alt="bin" width={20} height={20} />
+            <span>Видалити акаунт</span>
           </li>
         </ul>
       </aside>
 
-      <main className={styles.formSection}>
-        <h1>Мій акаунт</h1>
-        <div className={styles.formGroup}>
-          <label>Прізвище</label>
-          <input type="text" name="lastName" className={styles.input} 
-          value={userData.lastName} onChange={handleChange} />
+      <main className={styles.main}>
+        <h1 className={styles.pageTitle}>Мій акаунт</h1>
+
+        <form className={styles.form}>
+          <div className={styles.formGroup}>
+            <label>Прізвище</label>
+            <input
+              type="text"
+              name="lastName"
+              value={userData.lastName}
+              onChange={handleChange}
+              className={styles.input}
+            />
+          </div>
+          <div className={styles.formGroup}>
+            <label>Ім’я</label>
+            <input
+              type="text"
+              name="firstName"
+              value={userData.firstName}
+              onChange={handleChange}
+              className={styles.input}
+            />
+          </div>
+          <div className={styles.formGroup}>
+            <label>Номер телефону</label>
+            <input
+              type="tel"
+              name="phone"
+              value={userData.phone}
+              onChange={handleChange}
+              className={styles.input}
+            />
+          </div>
+          <div className={styles.formGroup}>
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              value={userData.email}
+              onChange={handleChange}
+              className={styles.input}
+            />
+          </div>
+        </form>
+
+        <div className={styles.buttonContainer}>
+          <button onClick={handleSave} className={styles.saveButton}>
+            Зберегти зміни
+          </button>
         </div>
-        <div className={styles.formGroup}>
-          <label>Ім’я</label>
-          <input type="text" name="firstName" className={styles.input} 
-          value={userData.firstName} onChange={handleChange} />
-        </div>
-        <div className={styles.formGroup}>
-          <label>Номер телефону</label>
-          <input type="tel" name="phone" className={styles.input} 
-          value={userData.phone} onChange={handleChange} />
-        </div>
-        <div className={styles.formGroup}>
-          <label>Email</label>
-          <input type="email" name="email" className={styles.input} 
-          value={userData.email} onChange={handleChange} />
-        </div>
-        <button className={styles.saveBtn} onClick={handleSave}>
-          Зберегти зміни
-        </button>
       </main>
     </div>
   );

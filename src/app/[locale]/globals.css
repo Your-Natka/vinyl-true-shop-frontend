@@ -101,7 +101,7 @@ button {
   top: 0;
   left: 252px;
   right: 0;
-  height: -84px;
+
   border-bottom: 1px solid #ddd;
   z-index: 110;
   display: flex;
@@ -109,8 +109,8 @@ button {
 }
 
 .main-content > main {
-  margin-top: 84px; /* відступ під header */
-  height: calc(100vh - 84px);
+  margin-top: 60px; /* відступ під header */
+  height: calc(100vh - 60px);
   overflow-y: auto;
 }
 
