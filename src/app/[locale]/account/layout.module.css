@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5; /* або інший колір фону */
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  background-color: #ffffff; /* фон контентної частини */
+}

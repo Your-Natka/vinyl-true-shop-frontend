@@ -1,0 +1,36 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 800px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.buttonContainer {
+  margin-top: 32px;
+}
+
+.saveButton {
+  background-color: #f5f5f5;
+  color: black;
+  padding: 12px 32px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.saveButton:hover {
+  background-color: #333;
+  color: white;
+}

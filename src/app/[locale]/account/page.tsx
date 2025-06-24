@@ -1,9 +1,5 @@
-import AccountForm from "./Account";
+import { redirect } from "next/navigation";
 
-export default function AccountPage() {
-  return (
-    <main>
-      <AccountForm />
-    </main>
-  );
+export default function AccountRootPage() {
+  redirect("/account/personal");
 }

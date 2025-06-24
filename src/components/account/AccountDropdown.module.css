@@ -1,0 +1,43 @@
+.wrapper {
+  position: relative;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #1a1a1a;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 200px;
+  padding: 0.5rem 0;
+  z-index: 1000;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  gap: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.item:hover {
+  background-color: #333;
+  cursor: pointer;
+}

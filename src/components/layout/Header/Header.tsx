@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import profile from "@/../public/icons/profile.svg";
+import user from "@/../public/icons/user.svg";
 import scales from "@/../public/icons/scales.svg";
 import search from "@/../public/icons/search.svg";
 import mobileMenu from "@/../public/icons/mobileMenu.svg";
@@ -87,7 +87,7 @@ const Header = () => {
           <CartIcon />
         </div>
         <Link href={`/${locale}/account`} className="btn">
-          <Image src={profile} alt="profile icon" width={24} height={24} />
+          <Image src={user} alt="profile icon" width={24} height={24} />
         </Link>
       </div>
     </div>
