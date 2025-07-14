@@ -9,6 +9,11 @@
   --color-bg: #f1f1f1;
   --hero-bg: #1a1a1a;
   --sidebar-bg: #1a1a1a;
+  --bg-secondary: #3B3B3B;
+  --border-color: #595959;
+  --error-color: #A8071A;
+
+  --border-radius: 16px;
 }
 
 * {
@@ -124,6 +129,19 @@ button {
 .scrollbar-hide {
   -ms-overflow-style: none; 
   scrollbar-width: none; 
+}
+
+.button {
+  background: var(--color-primary) !important;
+}
+
+.link-primary {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.input-error {
+  border-color: var(--error-color);
 }
 
 @media (max-width: 1024px) {

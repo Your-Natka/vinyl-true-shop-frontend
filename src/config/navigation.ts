@@ -7,3 +7,9 @@ export const mainNavLinks = [
   { labelKey: "sale", path: "/#sale" },
   { labelKey: "delivery", path: "/#delivery" },
 ];
+
+export const appPaths = {
+  signUp: "/signup",
+  login: "/login",
+  account: "/account",
+};

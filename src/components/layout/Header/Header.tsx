@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import css from "@/components/layout/Header/Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,15 +11,16 @@ import scales from "@/../public/icons/scales.svg";
 import search from "@/../public/icons/search.svg";
 import mobileMenu from "@/../public/icons/mobileMenu.svg";
 import logo from "@/../public/icons/logo.svg";
-import {  } from "next-intl";
+import {} from "next-intl";
 import CartIcon from "@/components/CartIcon/CartIcon";
-
+import { useSession } from "next-auth/react";
+import { appPaths } from "@/config/navigation";
 
 const Header = () => {
   const t = useTranslations("Header");
-  const locale = useLocale();
   const sections = ["hero", "products", "reviews", "about"];
   const [active, setActive] = useState("");
+  const session = useSession();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -86,9 +87,15 @@ const Header = () => {
         <div className="btn">
           <CartIcon />
         </div>
-        <Link href={`/${locale}/account`} className="btn">
-          <Image src={profile} alt="profile icon" width={24} height={24} />
-        </Link>
+        {session?.data?.user ? (
+          <Link href={appPaths.account} className="btn">
+            <Image src={profile} alt="profile icon" width={24} height={24} />
+          </Link>
+        ) : (
+          <Link href={appPaths.signUp} className="btn">
+            <Image src={profile} alt="profile icon" width={24} height={24} />
+          </Link>
+        )}
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import styles from "./Account.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { signOut } from "next-auth/react";
 
 interface UserData {
   firstName: string;
@@ -47,20 +48,37 @@ export default function AccountPage() {
       <aside className={styles.sidebar}>
         <h3 className={styles.sectionTitle}>Редагувати мої дані</h3>
         <ul className={styles.linkList}>
-          <li><Link href="#">Мої дані</Link></li>
-          <li><Link href="#">Моя адреса</Link></li>
-          <li><Link href="#">Методи оплати</Link></li>
+          <li>
+            <Link href="#">Мої дані</Link>
+          </li>
+          <li>
+            <Link href="#">Моя адреса</Link>
+          </li>
+          <li>
+            <Link href="#">Методи оплати</Link>
+          </li>
         </ul>
 
         <h3 className={styles.sectionTitle}>Мої замовлення</h3>
         <ul className={styles.linkList}>
-          <li><Link href="#">В процесі</Link></li>
-          <li><Link href="#">Виконані</Link></li>
-          <li><Link href="#">Всі</Link></li>
+          <li>
+            <Link href="#">В процесі</Link>
+          </li>
+          <li>
+            <Link href="#">Виконані</Link>
+          </li>
+          <li>
+            <Link href="#">Всі</Link>
+          </li>
         </ul>
 
         <ul className={styles.linkList}>
-          <li className={styles.iconItem}>
+          <li
+            className={styles.iconItem}
+            onClick={async () => {
+              await signOut();
+            }}
+          >
             <Image src="/icons/exit.svg" alt="exit" width={20} height={20} />
             <span>Вийти</span>
           </li>
@@ -97,23 +115,11 @@ export default function AccountPage() {
           </div>
           <div className={styles.formGroup}>
             <label>Номер телефону</label>
-            <input
-              type="tel"
-              name="phone"
-              value={userData.phone}
-              onChange={handleChange}
-              className={styles.input}
-            />
+            <input type="tel" name="phone" value={userData.phone} onChange={handleChange} className={styles.input} />
           </div>
           <div className={styles.formGroup}>
             <label>Email</label>
-            <input
-              type="email"
-              name="email"
-              value={userData.email}
-              onChange={handleChange}
-              className={styles.input}
-            />
+            <input type="email" name="email" value={userData.email} onChange={handleChange} className={styles.input} />
           </div>
         </form>
 

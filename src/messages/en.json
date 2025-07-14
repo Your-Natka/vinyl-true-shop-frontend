@@ -25,5 +25,31 @@
     "right-box-text": "For soul",
     "sale-title": "Sale",
     "popular-title": "Popular"
+  },
+  "Auth": {
+    "title": "Welcome",
+    "Signup": {
+      "subtitle": "Sign up to continue",
+      "account-exists": "Already have account?",
+      "login-btn": "Log in"
+    },
+    "Login": {
+      "subtitle": "Log in to continue",
+      "account-exists": "Don't have an account?",
+      "signup-btn": "Sing up"
+    },
+    "Errors": {
+      "LATIN_LETTERS": "Only latin letters",
+      "INVALID_EMAIL": "Invalid email",
+      "MIN": "(num) symbols at least",
+      "MAX": "Max length: (num) symbols",
+      "REQUIRED": "Required"
+    },
+    "fullName": "Full name",
+    "email": "Email",
+    "password": "Password",
+    "continue-btn": "Continue",
+    "divider": "or",
+    "google-btn": "Log in with Google"
   }
 }

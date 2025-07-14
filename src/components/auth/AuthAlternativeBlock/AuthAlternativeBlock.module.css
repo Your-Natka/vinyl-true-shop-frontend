@@ -1,0 +1,18 @@
+.block {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.divider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.divider-line {
+    height: 0.5px;
+    width: 100%;
+    background: var(--border-color);
+}

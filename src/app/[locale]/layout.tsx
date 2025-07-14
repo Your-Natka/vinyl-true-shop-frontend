@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { NextIntlClientProvider, hasLocale } from "next-intl";
+// import { NextIntlClientProvider, hasLocale } from "next-intl";
+// import { SessionProvider } from "next-auth/react";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
 import { onest, unbounded, publicSans } from "../fonts";
-import Header from "@/components/layout/Header/Header";
-import Container from "@/components/ui/Container/Container";
-import Sidebar from "@/components/layout/Sidebar/Sidebar";
-import Footer from "@/components/layout/Footer/footer";
+import AppProvider from "../context/AppProvider";
+import { hasLocale } from "next-intl";
 
 export const metadata: Metadata = {
   title: "Vinyl True Shop",
@@ -35,20 +34,9 @@ export default async function RootLayout({
   return (
     <html lang={locale} className={`scroll-smooth ${onest.variable} ${unbounded.variable} ${publicSans.variable}`}>
       <body>
-        <NextIntlClientProvider messages={messages}>
-          <div className="app-layout">
-            <Sidebar />
-            <div className="main-content">
-              <header>
-                <Container>
-                  <Header />
-                </Container>
-              </header>
-              <main>{children}</main>
-              <Footer />
-            </div>
-          </div>
-        </NextIntlClientProvider>
+        <AppProvider locale={locale} messages={messages}>
+          {children}
+        </AppProvider>
       </body>
     </html>
   );
