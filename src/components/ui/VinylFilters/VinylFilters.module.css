@@ -53,18 +53,9 @@
 
 /* Стилі для селекта */
 .filterSelect {
-  width: 100%;
   background-color: #2a2a2a;
   color: #f5f5f5;
   border: 1px solid #3a3a3a;
-  border-radius: 4px;
-  padding: 8px 10px;
-  font-size: 14px;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='6' fill='none'%3E%3Cpath stroke='%23f5f5f5' stroke-linecap='round' stroke-linejoin='round' d='m1 1 5 4 5-4'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  cursor: pointer;
 }
 
 .filterSelect:focus {
@@ -137,44 +128,6 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-
-.checkboxLabel {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-/* Чекбокси */
-.filterCheckbox {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 16px;
-  height: 16px;
-  background-color: #2a2a2a;
-  border: 1px solid #3a3a3a;
-  border-radius: 3px;
-  margin-right: 8px;
-  position: relative;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.filterCheckbox:checked {
-  background-color: #6255d3;
-  border-color: #6255d3;
-}
-
-.filterCheckbox:checked::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 5px;
-  width: 4px;
-  height: 8px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
 }
 
 /* Кнопка застосування фільтрів */

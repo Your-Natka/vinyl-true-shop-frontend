@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "name": "genreId",
+    "label": {
+      "uk": "Жанр",
+      "en": "Genre"
+    },
+    "type": "select",
+    "placeholder": {
+      "uk": "Оберіть жанр",
+      "en": "Select genre"
+    },
+    "options": {
+      "uk": [
+        { "id": 1, "label": "Рок" },
+        { "id": 2, "label": "Поп" },
+        { "id": 3, "label": "Джаз" },
+        { "id": 4, "label": "Електронна" },
+        { "id": 5, "label": "Хіп-хоп" },
+        { "id": 6, "label": "Класична" }
+      ],
+      "en": [
+        { "id": 1, "label": "Rock" },
+        { "id": 2, "label": "Pop" },
+        { "id": 3, "label": "Jazz" },
+        { "id": 4, "label": "Electronic" },
+        { "id": 5, "label": "Hip-hop" },
+        { "id": 6, "label": "Classical" }
+      ]
+    }
+  },
+  {
+    "id": 1,
+    "name": "artist",
+    "label": {
+      "uk": "Виконавець",
+      "en": "Artist"
+    },
+    "type": "text",
+    "placeholder": {
+      "uk": "Введіть ім'я виконавця",
+      "en": "Enter artist name"
+    }
+  },
+  {
+    "id": 2,
+    "name": "album",
+    "label": {
+      "uk": "Альбом",
+      "en": "Album"
+    },
+    "type": "text",
+    "placeholder": {
+      "uk": "Введіть назву альбому",
+      "en": "Enter album name"
+    }
+  },
+  {
+    "id": 3,
+    "name": "price",
+    "label": {
+      "uk": "Ціна",
+      "en": "Price"
+    },
+    "type": "range",
+    "min": 0,
+    "max": 10000,
+    "placeholder": {
+      "uk": {
+        "from": "від",
+        "to": "до"
+      },
+      "en": {
+        "from": "from",
+        "to": "to"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "name": "year",
+    "label": {
+      "uk": "Рік випуску",
+      "en": "Release year"
+    },
+    "type": "range",
+    "min": 1900,
+    "max": 2025,
+    "placeholder": {
+      "uk": {
+        "from": "від",
+        "to": "до"
+      },
+      "en": {
+        "from": "from",
+        "to": "to"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "name": "releaseType",
+    "label": {
+      "uk": "Випуск",
+      "en": "Release type"
+    },
+    "type": "checkbox",
+    "options": {
+      "uk": ["Платівка", "Мініальбом", "Сингл"],
+      "en": ["LP", "EP", "Single"]
+    }
+  }
+]

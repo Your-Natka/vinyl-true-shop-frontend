@@ -1,0 +1,37 @@
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Чекбокси */
+.filterCheckbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 3px;
+    margin-right: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.filterCheckbox:checked {
+    background-color: #6255d3;
+    border-color: #6255d3;
+}
+
+.filterCheckbox:checked::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}

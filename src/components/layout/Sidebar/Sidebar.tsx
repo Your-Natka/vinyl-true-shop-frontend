@@ -34,16 +34,17 @@ const Sidebar = () => {
 
     return pathname === path;
   };
+
   const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-  e.preventDefault();
-  if (typeof window !== "undefined") {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-      history.replaceState(null, "", `#${id}`);
+    e.preventDefault();
+    if (typeof window !== "undefined") {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.replaceState(null, "", `#${id}`);
+      }
     }
-  }
-};
+  };
 
   const toggleFilter = () => {
     setIsFilterOpen(!isFilterOpen);
